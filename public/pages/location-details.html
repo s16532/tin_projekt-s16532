@@ -10,7 +10,7 @@
 
 <header>
     <h1>Serwis Samochodowy TOP-SERVICE</h1>
-    <img src="../images/logo.jpg" alt="Serwis Samochodowy TOP-SERVICE">
+    <img src="../images/logo.jpg" width="90" height="90" alt="Serwis Samochodowy TOP-SERVICE" >
 </header>
 
 <nav>
@@ -25,7 +25,7 @@
 
 <main>
     <h2>Szczegóły warsztatu</h2>
-    <form>
+    <form class="form">
         <div>
             <label for="locationName">Nazwa Warsztatu</label>
             <input type="text" name="locationName" value="Warszawa-Jerozolimskie" id="locationName" disabled>
@@ -51,13 +51,13 @@
             <input type="text" name="country" value="Polska" id="country" disabled>
         </div>
         <div>
-            <a href="">Edytuj</a>
+            <p><a href="./location-form.html" class="list-actions-button-edit ">Edytuj</a></p>
         </div>
     </form>
 
     <h2>Naprawy</h2>
 
-    <table>
+    <table class="table-list">
         <thead>
         <tr>
             <th>ID</th>
@@ -78,7 +78,7 @@
                 <td>2020-12-1</td>
                 <td>2020-12-5</td>
                 <td>
-                    <a href="">Szczegóły</a>
+                    <a href="" class="list-actions-button-details">Szczegóły</a>
                 </td>
             </tr>
             <tr>
@@ -89,13 +89,12 @@
                 <td>2020-12-2</td>
                 <td>Na warsztacie</td>
                 <td>
-                    <a href="">Szczegóły</a>
+                    <a href="" class="list-actions-button-details">Szczegóły</a>
                 </td>
             </tr>
         </tbody>
     </table>
-
-    <a href="">Powrót</a>
+    <p><a href="./location-list.html" class="button-back">Powrót</a></p>
 </main>
 
 <footer>
