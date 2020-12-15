@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+<link rel="stylesheet" href="../css/style.css" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
@@ -9,14 +10,14 @@
 
 <header>
     <h1>Serwis Samochodowy TOP-SERVICE</h1>
-    <img src="../images/logo.jpg" alt="Serwis Samochodowy TOP-SERVICE">
+    <img src="../images/logo.jpg" width="90" height="90" alt="Serwis Samochodowy TOP-SERVICE" >
 </header>
 
 <nav>
     <ul>
-        <li><a href=" ">Strona Główna</a></li>
+        <li><a href="../index.html">Strona Główna</a></li>
         <li><a href=" ">Naprawy</a></li>
-        <li><a href=" ">Warsztaty</a></li>
+        <li><a href="location-list.html" class="active">Warsztaty</a></li>
         <li><a href=" ">Pojazdy</a></li>
         <li><a href=" ">Pracownicy</a></li>
     </ul>
@@ -24,7 +25,7 @@
 
 <main>
     <h2>Nowy Warsztat</h2>
-    <form>
+    <form class="form">
         <div>
             <label for="locationName">Nazwa Warsztatu<sup>*</sup></label>
             <input type="text" name="locationName" id="locationName">
@@ -49,9 +50,9 @@
             <label for="country">Kraj<sup>*</sup></label>
             <input type="text" name="country" id="country">
         </div>
-        <div>
-            <input type="submit" value="Dodaj">
-            <a href="">Anuluj</a>
+        <div class="form-buttons">
+            <input type="submit" class="form-button-submit" value="Dodaj">
+            <a href="./location-list.html" class="form-button-cancel">Anuluj</a>
         </div>
     </form>
 </main>

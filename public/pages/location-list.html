@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
 <head>
+    <link rel="stylesheet" href="../css/style.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <title>Serwis Samochodowy TOP-SERVICE</title>
@@ -9,14 +10,14 @@
 
 <header>
     <h1>Serwis Samochodowy TOP-SERVICE</h1>
-    <img src="../images/logo.jpg" alt="Serwis Samochodowy TOP-SERVICE">
+    <img src="../images/logo.jpg" width="90" height="90" alt="Serwis Samochodowy TOP-SERVICE" >
 </header>
 
 <nav>
     <ul>
-        <li><a href=" ">Strona Główna</a></li>
+        <li><a href="../index.html">Strona Główna</a></li>
         <li><a href=" ">Naprawy</a></li>
-        <li><a href=" ">Warsztaty</a></li>
+        <li><a href="location-list.html" class="active">Warsztaty</a></li>
         <li><a href=" ">Pojazdy</a></li>
         <li><a href=" ">Pracownicy</a></li>
     </ul>
@@ -25,12 +26,12 @@
 <main>
     <h2>Warsztaty</h2>
 
-    <table>
+    <table class="table-list">
         <thead>
             <tr>
                 <th>Nazwa</th>
                 <th>Miasto</th>
-                <th>Ullica</th>
+                <th>Ulica</th>
                 <th>Numer</th>
                 <th>Kod pocztowy</th>
                 <th>Kraj</th>
@@ -46,15 +47,15 @@
                 <td>02-326</td>
                 <td>Polska</td>
                 <td>
-                    <ul>
+                    <ul class="list-actions">
                         <li>
-                            <a href="">Szczegóły</a>
+                            <a href="location-details.html" class="list-actions-button-details">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="">Edytuj</a>
+                            <a href="location-form.html" class="list-actions-button-edit">Edytuj</a>
                         </li>
                         <li>
-                            <a href="">Usuń</a>
+                            <a href="" class="list-actions-button-delete">Usuń</a>
                         </li>
                     </ul>
                 </td>
@@ -67,22 +68,22 @@
                 <td>61-332</td>
                 <td>Polska</td>
                 <td>
-                    <ul>
+                    <ul class="list-actions">
                         <li>
-                            <a href="">Szczegóły</a>
+                            <a href="" class="list-actions-button-details">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="">Edytuj</a>
+                            <a href="" class="list-actions-button-edit">Edytuj</a>
                         </li>
                         <li>
-                            <a href="">Usuń</a>
+                            <a href="" class="list-actions-button-delete">Usuń</a>
                         </li>
                     </ul>
                 </td>
             </tr>
         </tbody>
     </table>
-    <p><a href="">Dodaj nowy warsztat</a> </p>
+    <p><a href="location-form.html" class="button-add">Dodaj nowy warsztat</a> </p>
 
 </main>
 
