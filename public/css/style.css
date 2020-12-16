@@ -7,59 +7,6 @@ body {
     min-width: 360px;
 }
 
-@media all and (max-width: 765px) {
-
-    .form {
-        grid-template-columns: 1fr;
-        row-gap: unset;
-        margin-left: unset;
-    }
-
-    .form input[type="text"],
-    .form input[type="number"],
-    .form input[type="date"],
-    .form select {
-        margin-bottom: 1rem;
-    }
-
-    header {
-        flex-direction: column;
-    }
-    header h1 {
-        text-align: center;
-    }
-    header img  {
-        align-self: center;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-    }
-    nav ul li {
-        flex-basis: 50%;
-        text-align: center;
-    }
-    nav ul li a {
-        display: block;
-    }
-
-}
-
-@media all and (max-width: 400px) {
-    body,
-    nav,
-    nav ul,
-    header,
-    main,
-    footer {
-        margin: 0;
-    }
-
-    nav ul li {
-        flex-basis: 100%;
-    }
-}
-
 header,
 main,
 footer {
@@ -240,6 +187,10 @@ textarea {
     margin: 0;
 }
 
+textarea {
+    overflow: auto;
+}
+
 .form {
     display: grid;
     grid-template-columns: 145px 300px;
@@ -285,4 +236,58 @@ abbr[title='required'] {
 
 .form-button-submit {
     margin-bottom: 0.5rem;
+}
+
+@media all and (max-width: 765px) {
+
+    header {
+        flex-direction: column;
+    }
+    header h1 {
+        text-align: center;
+    }
+    header img  {
+        align-self: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        flex-basis: 50%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+    }
+
+    .form {
+        grid-auto-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+
+    .form input[type="text"],
+    .form input[type="number"],
+    .form input[type="date"],
+    .form select {
+        margin-bottom: 1rem;
+    }
+
+
+}
+
+@media all and (max-width: 400px) {
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer {
+        margin: 0;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+    }
 }
