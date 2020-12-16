@@ -4,7 +4,60 @@ html {
 }
 
 body {
-    min-width: 600px;
+    min-width: 360px;
+}
+
+@media all and (max-width: 765px) {
+
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+
+    .form input[type="text"],
+    .form input[type="number"],
+    .form input[type="date"],
+    .form select {
+        margin-bottom: 1rem;
+    }
+
+    header {
+        flex-direction: column;
+    }
+    header h1 {
+        text-align: center;
+    }
+    header img  {
+        align-self: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        flex-basis: 50%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+    }
+
+}
+
+@media all and (max-width: 400px) {
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer {
+        margin: 0;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+    }
 }
 
 header,
@@ -13,7 +66,7 @@ footer {
     background-color: white;
 }
 
-heade,
+head,
 main,
 footer,
 nav{
@@ -27,16 +80,9 @@ footer{
     padding: 1rem;
 }
 
-header{
-    overflow: auto;
-}
-
-header h1 {
-    float: right;
-}
-
-header img {
-    float: left;
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 nav {
@@ -44,13 +90,9 @@ nav {
 }
 
 nav ul {
+    display: flex;
     padding: 0;
-    overflow: hidden;
     list-style-type: none;
-}
-
-nav ul li {
-    float: left;
 }
 
 nav ul li a {
@@ -199,8 +241,9 @@ textarea {
 }
 
 .form {
-    margin-left: 2rem;
-    width: 400px;
+    display: grid;
+    grid-template-columns: 145px 300px;
+    row-gap: 1rem;
 }
 
 .form select,
@@ -226,7 +269,8 @@ abbr[title='required'] {
 }
 
 .form-buttons {
-    margin-top: 2rem;
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 
 .form-button-cancel,
