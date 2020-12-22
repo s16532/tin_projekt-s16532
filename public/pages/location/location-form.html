@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
-<link rel="stylesheet" href="/css/style.css" />
 <head>
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+    <script type="application/javascript" src="/js/validationLocationForm.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serwis Samochodowy TOP-SERVICE</title>
 </head>
 <body>
@@ -25,20 +27,27 @@
 
 <main>
     <h2>Nowy Warsztat</h2>
-    <form class="form">
-            <label for="locationName">Nazwa Warsztatu<sup>*</sup></label>
-            <input type="text" name="locationName" id="locationName">
+    <form class="form" novalidate onsubmit="return validateForm()">
+        <label for="locationName">Nazwa Warsztatu:<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="text" name="locationName" id="locationName" />
+            <span id="errorLocationName" class="errors-text"></span>
             <label for="city">Miasto<sup>*</sup></label>
-            <input type="text" name="city" id="city">
+            <input type="text" name="city" id="city" />
+            <span id="errorCity" class="errors-text"></span>
             <label for="street">Ulica<sup>*</sup></label>
-            <input type="text" name="street" id="street">
+            <input type="text" name="street" id="street" />
+            <span id="errorStreet" class="errors-text"></span>
             <label for="streetNum">Numer Ulicy<sup>*</sup></label>
-            <input type="text" name="streetNum" id="streetNum">
+            <input type="text" name="streetNum" id="streetNum" />
+            <span id="errorStreetNum" class="errors-text"></span>
             <label for="postCode">Kod Pocztowy<sup>*</sup></label>
-            <input type="text" name="postCode" id="postCode">
-            <label for="country">Kraj<sup>*</sup></label>
-            <input type="text" name="country" id="country">
+            <input type="text" name="postCode" id="postCode" />
+            <span id="errorPostCode" class="errors-text"></span>
+            <label for="post">Kraj<sup>*</sup></label>
+            <input type="text" name="post" id="post" />
+            <span id="errorPost" class="errors-text"></span>
         <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
             <input type="submit" class="form-button-submit" value="Dodaj">
             <a href="/pages/location/location-list.html" class="form-button-cancel">Anuluj</a>
         </div>
