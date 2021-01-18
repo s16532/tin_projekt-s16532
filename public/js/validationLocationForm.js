@@ -53,10 +53,10 @@ function validateForm(){
         valid = false;
         streetNumInput.classList.add("error-input");
         errorStreetNum.innerText = "Pole jest wymagane";
-    } else if (!checkTextLengthRange(streetNumInput.value, 2, 64)){
+    } else if (!checkTextLengthRange(streetNumInput.value, 1, 64)){
         valid = false;
         streetNumInput.classList.add("error-input");
-        errorStreetNum.innerText = "Pole powinno zawierać od 2 do 64 znaków"
+        errorStreetNum.innerText = "Pole powinno zawierać od 1 do 64 znaków"
     }
 
     if(!checkRequired(postCodeInput.value)) {

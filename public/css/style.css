@@ -193,7 +193,7 @@ textarea {
 
 .form {
     display: grid;
-    grid-template-columns: 150px 300px;
+    grid-template-columns: 150px 300px 1fr;
     row-gap: 1rem;
     column-gap: 1rem;
 }
