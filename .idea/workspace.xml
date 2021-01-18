@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/validationLocationForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/vallidationCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationCommon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/location/location-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location/location-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/pages/location/location-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location/location-form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,6 +77,9 @@
       <workItem from="1608556184582" duration="4841000" />
       <workItem from="1608581354764" duration="3948000" />
       <workItem from="1608635520426" duration="11175000" />
+      <workItem from="1608661639921" duration="597000" />
+      <workItem from="1608672874024" duration="600000" />
+      <workItem from="1610919385453" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>

@@ -27,7 +27,7 @@
 
 <main>
     <h2>Nowy Warsztat</h2>
-    <form class="form" novalidate onsubmit="return validateForm()">
+    <form class="form" novalidate onsubmit="return validateForm();">
         <label for="locationName">Nazwa Warsztatu:<abbr title="required" aria-label="required">*</abbr></label>
             <input type="text" name="locationName" id="locationName" />
             <span id="errorLocationName" class="errors-text"></span>
@@ -43,7 +43,7 @@
             <label for="postCode">Kod Pocztowy<sup>*</sup></label>
             <input type="text" name="postCode" id="postCode" />
             <span id="errorPostCode" class="errors-text"></span>
-            <label for="post">Kraj<sup>*</sup></label>
+            <label for="post">Poczta<sup>*</sup></label>
             <input type="text" name="post" id="post" />
             <span id="errorPost" class="errors-text"></span>
         <div class="form-buttons">
