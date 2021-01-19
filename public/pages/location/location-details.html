@@ -17,7 +17,7 @@
 <nav>
     <ul>
         <li><a href="/index.html">Strona Główna</a></li>
-        <li><a href=" ">Naprawy</a></li>
+        <li><a href="/pages/repair/repair-list.html">Naprawy</a></li>
         <li><a href="/pages/location/location-list.html" class="active">Warsztaty</a></li>
         <li><a href="/pages/vehicle/vehicle-list.html">Pojazdy</a></li>
         <li><a href=" ">Pracownicy</a></li>
@@ -73,8 +73,14 @@
                 <td>2020-12-5</td>
                 <td>120 PLN</td>
                 <td>
-                    <a href="" class="list-actions-button-details">Szczegóły</a>
-                    <a href="" class="list-actions-button-details">Pojazd</a>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="" class="list-actions-button-details">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="/pages/vehicle/vehicle-details.html" class="list-actions-button-vehicle">Pojazd</a>
+                        </li>
+                    </ul>
                 </td>
             </tr>
             <tr>
@@ -86,13 +92,21 @@
                 <td>Na warsztacie</td>
                 <td>100 PLN</td>
                 <td>
-                    <a href="" class="list-actions-button-details">Szczegóły</a>
-                    <a href="" class="list-actions-button-details">Pojazd</a>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="" class="list-actions-button-details">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="" class="list-actions-button-vehicle">Pojazd</a>
+                        </li>
+                    </ul>
                 </td>
             </tr>
         </tbody>
     </table>
+
     <p><a href="location-list.html" class="button-back">Powrót</a></p>
+
 </main>
 
 <footer>

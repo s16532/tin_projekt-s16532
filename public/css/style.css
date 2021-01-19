@@ -107,6 +107,7 @@ main h2 {
 }
 
 .list-actions-button-details,
+.list-actions-button-vehicle,
 .list-actions-button-edit,
 .list-actions-button-delete {
     display: inline-block;
@@ -115,6 +116,7 @@ main h2 {
 }
 
 .list-actions-button-details,
+.list-actions-button-vehicle,
 .list-actions-button-edit,
 .list-actions-button-delete,
 .button-add,
@@ -158,11 +160,13 @@ main h2 {
     padding: 0.5rem 1rem;
 }
 .button-add,
-.form-button-submit {
+.form-button-submit,
+.list-actions-button-vehicle {
     background-color: #27ae60;
 }
 .button-add:hover,
-.form-button-submit:hover {
+.form-button-submit:hover,
+.list-actions-button-vehicle {
     background-color: #2ecc71;
 }
 
