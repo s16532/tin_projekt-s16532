@@ -1,7 +1,7 @@
 <html lang="pl-PL">
 <head>
     <script type="application/javascript" src="/js/validationCommon.js"></script>
-    <script type="application/javascript" src="/js/validationLocationForm.js"></script>
+    <script type="application/javascript" src="/js/validationVehicleForm.js"></script>
     <link rel="stylesheet" href="/css/style.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +32,7 @@
         <span id="errorVIN" class="errors-text"></span>
         <label for="vehicleType">Typ pojazdu<sup>*</sup></label>
         <select name="vehicleType" id="vehicleType" >
+            <option value="">--- Wybierz typ pojazdu ---</option>
             <option value="car">Samochód osobowy</option>
             <option value="truck">Samochód ciężarowy</option>
             <option value="bus">Autobus</option>
@@ -49,6 +50,7 @@
         <span id="errorProductionYear" class="errors-text"></span>
         <label for="engineType">Typ silnika<sup>*</sup></label>
         <select name="engineType" id="engineType" >
+            <option value="">--- Wybierz typ silnika ---</option>
             <option value="petrol">Benzyna</option>
             <option value="diesel">Diesel</option>
             <option value="hybrid">Hybryda</option>
@@ -61,7 +63,7 @@
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
             <input type="submit" class="form-button-submit" value="Dodaj">
-            <a href="/pages/location/location-list.html" class="form-button-cancel">Anuluj</a>
+            <a href="/pages/vehicle/vehicle-list.html" class="form-button-cancel">Anuluj</a>
         </div>
     </form>
 </main>

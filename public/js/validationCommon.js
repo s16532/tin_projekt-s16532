@@ -52,3 +52,21 @@ function checkPostCode(value){
     const re = /\d{2}-\d{3}/g;
     return re.test(value);
 }
+
+function checkProcudcionDate(value){
+    if(!value){
+        return false
+    }
+    value = value.toString().trim();
+    const re = /\d{4}/g;
+    return re.test(value);
+}
+
+function checkEngineSize(value){
+    if(!value){
+        return false
+    }
+    value = value.toString().trim();
+    const re = /(\d|\d{2})\.\d/g;
+    return re.test(value);
+}
