@@ -1,0 +1,119 @@
+<html lang="pl-PL">
+<head>
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+    <script type="application/javascript" src="/js/validationVehicleForm.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis Samochodowy TOP-SERVICE</title>
+</head>
+<body>
+
+<header>
+    <h1>Serwis Samochodowy TOP-SERVICE</h1>
+    <img src="/images/logo.jpg"  alt="Serwis Samochodowy TOP-SERVICE" >
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/index.html">Strona Główna</a></li>
+        <li><a href=" ">Naprawy</a></li>
+        <li><a href="/pages/location/location-list.html">Warsztaty</a></li>
+        <li><a href="/pages/vehicle/vehicle-list.html" class="active">Pojazdy</a></li>
+        <li><a href=" ">Pracownicy</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Szczegóły Pojazdu</h2>
+    <form class="form">
+        <label for="VIN">VIN</label>
+        <input type="text" name="VIN" value="1NXBU4EE0AZ325696" id="VIN" />
+        <span></span>
+        <label for="vehicleType">Typ pojazdu</label>
+        <input type="text" name="vehicleType" value="Samochód osobowy" id="vehicleType" />
+        <span></span>
+        <label for="brand">Marka</label>
+        <input type="text" name="brand" value="Opel" id="brand" />
+        <span></span>
+        <label for="model">Model</label>
+        <input type="text" name="model" value="Corsa" id="model" />
+        <span></span>
+        <label for="productionYear">Rok produkcji</label>
+        <input type="text" name="productionYear" value="2000" id="productionYear" />
+        <span></span>
+        <label for="engineType">Typ silnika<sup>*</sup></label>
+        <input type="text" name="engineType" value="Benzyna" id="engineType" />
+        <span></span>
+        <label for="engineSize">Pojemność silnika</label>
+        <input type="text" name="engineSize" value="1.0" id="engineSize" />
+        <span></span>
+        <p><a href="/pages/vehicle/vehicle-form.html" class="list-actions-button-edit ">Edytuj</a></p>
+    </form>
+
+    <h2>Naprawy</h2>
+
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Warsztat</th>
+            <th>Miasto</th>
+            <th>Ulica</th>
+            <th>Numer</th>
+            <th>Data Przyjęcia</th>
+            <th>Data Zakończenia</th>
+            <th>Wykonane Usługi</th>
+            <th>Koszt</th>
+            <th>Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>Warszawa-Jerozolimskie</td>
+            <td>Warszawa</td>
+            <td>Aleje Jerozolimskie</td>
+            <td>147</td>
+            <td>2020-12-1</td>
+            <td>2020-12-5</td>
+            <td>
+                <p>aaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+                <p>ccccccccccccccccccccccccc</p>
+                <p>dddddddddddddddddddddddd</p>
+            </td>
+            <td>120 PLN</td>
+            <td>
+                <a href="" class="list-actions-button-details">Szczegóły</a>
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Poznań-Krzesiny</td>
+            <td>Poznań</td>
+            <td>Ożarowska</td>
+            <td>42</td>
+            <td>2021-01-11</td>
+            <td>2021-01-18</td>
+            <td>
+                <p>aaaaaaaaaaaaaaaaaaaaaa</p>
+                <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+                <p>ccccccccccccccccccccccccc</p>
+                <p>dddddddddddddddddddddddd</p>
+            </td>
+            <td>50 PLN</td>
+            <td>
+                <a href="" class="list-actions-button-details">Szczegóły</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="location-list.html" class="button-back">Powrót</a></p>
+</main>
+
+<footer>
+    Mateusz Jacoszek, s16532
+</footer>
+</body>
+</html>
