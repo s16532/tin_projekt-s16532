@@ -1,0 +1,98 @@
+<html lang="pl-PL">
+<head>
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+    <script type="application/javascript" src="/js/validationVehicleForm.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis Samochodowy TOP-SERVICE</title>
+</head>
+<body>
+
+<header>
+    <h1>Serwis Samochodowy TOP-SERVICE</h1>
+    <img src="/images/logo.jpg"  alt="Serwis Samochodowy TOP-SERVICE" >
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/index.html">Strona Główna</a></li>
+        <li><a href="/pages/repair/repair-list.html" class="active">Naprawy</a></li>
+        <li><a href="/pages/location/location-list.html">Warsztaty</a></li>
+        <li><a href="/pages/vehicle/vehicle-list.html">Pojazdy</a></li>
+        <li><a href=" ">Pracownicy</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Nowa Naprawa</h2>
+    <form class="form" novalidate onsubmit="return validateForm();">
+        <label for="id">ID</label>
+        <input type="text" name="id" id="id" value="1" disabled="true"/>
+        <span></span>
+
+        <label for="status">Status<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="status" id="status" >
+            <option value="1">Przyjęty</option>
+            <option value="2">Diagnoza</option>
+            <option value="3">Oczekuje</option>
+            <option value="4">Na warsztacie</option>
+            <option value="5">Gotowy do odbioru</option>
+            <option value="7">Wydany</option>
+        </select>
+        <span id="errorStatus" class="errors-text"></span>
+
+        <label for="location">Warsztat<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="location" id="location" >
+            <option value="">--- Wybierz warsztat ---</option>
+            <option value="Warszawa-Jerozolimskie">Warszawa-Jerozolimskie</option>
+            <option value="Poznań-Krzesiny">Poznań-Krzesiny</option>
+        </select>
+        <span id="errorLocation" class="errors-text"></span>
+
+        <label for="vehicle">Pojazd<sup>*</sup></label>
+        <select name="vehicle" id="vehicle" >
+            <option value="">--- Wybierz pojazd ---</option>
+            <option value="1NXBU4EE0AZ325696">1NXBU4EE0AZ325696</option>
+            <option value="JS2RA62SX65342742">JS2RA62SX65342742</option>
+        </select>
+        <span id="errorVehicle" class="errors-text"></span>
+
+        <label for="addmisionDate">Data przyjęcia<sup>*</sup></label>
+        <input type="text" name="addmisionDate" value="dd/mm/yyyy" id="addmisionDate" />
+        <span id="errorAddmisionDate" class="errors-text"></span>
+
+        <label for="addmisionEmp">Pracownik Przyjmujący<sup>*</sup></label>
+        <select name="addmisionEmp" id="addmisionEmp" >
+            <option value="">--- Wybierz pracownika ---</option>
+            <option value="1">Adam Nowak</option>
+            <option value="2">Marian Kowalski</option>
+            <option value="3">Apolonia Marchewka</option>
+        </select>
+        <span id="errorAddmisionEmp" class="errors-text"></span>
+
+        <label for="releaseDate">Data zakończenia</label>
+        <input type="text" name="releaseDate" value="dd/mm/yyyy" id="releaseDate" />
+        <span id="errorReleaseDate" class="errors-text"></span>
+
+        <label for="releaseEmp">Pracownik Wydający</label>
+        <select name="releaseEmp" id="releaseEmp" >
+            <option value="">--- Wybierz pracownika ---</option>
+            <option value="1">Adam Nowak</option>
+            <option value="2">Marian Kowalski</option>
+            <option value="3">Apolonia Marchewka</option>
+        </select>
+        <span id="errorReleaseEmp" class="errors-text"></span>
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <input type="submit" class="form-button-submit" value="Dodaj">
+            <a href="/pages/vehicle/vehicle-list.html" class="form-button-cancel">Anuluj</a>
+        </div>
+    </form>
+</main>
+
+<footer>
+    Mateusz Jacoszek, s16532
+</footer>
+</body>
+</html>
