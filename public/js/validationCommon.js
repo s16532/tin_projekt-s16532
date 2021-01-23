@@ -16,6 +16,9 @@ function checkRequired(value) {
     if (value === ""){
         return false;
     }
+    if(value === "yyyy-mm-dd"){
+        return false;
+    }
     return true;
 }
 
@@ -69,4 +72,43 @@ function checkEngineSize(value){
     value = value.toString().trim();
     const re = /(\d|\d{2})\.\d/g;
     return re.test(value);
+}
+
+function checkDate(value) {
+    if (!value) {
+        return false;
+    }
+    const pattern = /(\d{4})-(\d{2})-(\d{2})/;
+    return pattern.test(value);
+}
+
+function checkDateIfAfter(value, compareTo) {
+    if (!value) {
+        return false;
+    }
+    if (!compareTo) {
+        return false;
+    }
+    const pattern = /(\d{4})-(\d{2})-(\d{2})/;
+    if (!pattern.test(value)) {
+        return false;
+    }
+    if (!pattern.test(compareTo)) {
+        return false;
+    }
+    const valueDate = new Date(value);
+    const compareToDate = new Date(compareTo);
+    if (valueDate.getTime() <= compareToDate.getTime()) {
+        return false;
+    }
+    return true;
+
+}
+
+function checkDateNotDefault(value) {
+    if (!value) {
+        return false;
+    }
+    const pattern =! /(\d{4})-(\d{2})-(\d{2})/;
+    return pattern.test(value);
 }
