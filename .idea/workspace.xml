@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/pages/employer/employer-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/location/location-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location/location-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/location/location-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location/location-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/location/location-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location/location-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/repair/repair-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/repair/repair-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/repair/repair-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/repair/repair-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/vehicle/vehicle-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/vehicle/vehicle-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/vehicle/vehicle-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/vehicle/vehicle-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/vehicle/vehicle-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/vehicle/vehicle-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/employer/employer-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/employer/employer-list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +88,7 @@
       <workItem from="1610981086099" duration="24654000" />
       <workItem from="1611169527543" duration="597000" />
       <workItem from="1611253173735" duration="542000" />
-      <workItem from="1611430263873" duration="5549000" />
+      <workItem from="1611430263873" duration="6606000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -210,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611439766461</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added validationRepairForm.js">
+      <created>1611440621632</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611440621632</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,10 +247,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607988509703" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1611439764090">
+    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1611440619916">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611439764090" />
+    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611440619916" />
     <state x="934" y="389" key="FileChooserDialogImpl" timestamp="1607988503994">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -272,10 +271,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1256" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611439768180">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611440624940">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611439768180" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611440624940" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611019476112">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
