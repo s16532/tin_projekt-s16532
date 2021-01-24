@@ -17,7 +17,7 @@ function validateForm(){
     const errorEngineSize = document.getElementById('errorEngineSize');
     const errorsSummary = document.getElementById('errorsSummary');
 
-    let valid = false;
+    let valid = true;
 
     resetErrors([VINInput, vehicleTypeInput, brandInput, modelInput, productionYearInput, engineTypeInput, engineSizeInput], [errorVIN, errorVehicleType, errorBrand, errorModel, errorProductionYear, errorEngineType, errorEngineSize], errorsSummary);
 

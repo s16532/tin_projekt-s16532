@@ -1,0 +1,62 @@
+<html lang="pl-PL">
+<head>
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+    <script type="application/javascript" src="/js/validationEmployerForm.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis Samochodowy TOP-SERVICE</title>
+</head>
+<body>
+
+<header>
+    <h1>Serwis Samochodowy TOP-SERVICE</h1>
+    <img src="/images/logo.jpg"  alt="Serwis Samochodowy TOP-SERVICE" >
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/index.html">Strona Główna</a></li>
+        <li><a href="/pages/repair/repair-list.html">Naprawy</a></li>
+        <li><a href="/pages/location/location-list.html">Warsztaty</a></li>
+        <li><a href="/pages/vehicle/vehicle-list.html">Pojazdy</a></li>
+        <li><a href="/pages/employer/employer-list.html" class="active">Pracownicy</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h2>Nowy Pracownik</h2>
+    <form class="form" novalidate onsubmit="return validateForm();">
+        <label for="uname">Nazwa użytkownika<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="uname" id="uname" />
+        <span id="errorUname" class="errors-text"></span>
+
+        <label for="lastName">Nazwisko<sup>*</sup></label>
+        <input type="text" name="lastName" id="lastName" />
+        <span id="errorLastName" class="errors-text"></span>
+
+        <label for="firstName">Imie<sup>*</sup></label>
+        <input type="text" name="firstName" id="firstName" />
+        <span id="errorFirstName" class="errors-text"></span>
+
+        <label for="empRole">Rola</label>
+        <select name="empRole" id="empRole" >
+            <option value="">--- Wybierz rolę ---</option>
+            <option value="1">Administrator</option>
+            <option value="2">Mechanik</option>
+        </select>
+        <span id="errorEmpRole" class="errors-text"></span>
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <input type="submit" class="form-button-submit" value="Dodaj">
+            <a href="/pages/employer/employer-list.html" class="form-button-cancel">Anuluj</a>
+        </div>
+    </form>
+</main>
+
+<footer>
+    Mateusz Jacoszek, s16532
+</footer>
+</body>
+</html>

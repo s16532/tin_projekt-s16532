@@ -15,7 +15,7 @@ function validateForm(){
     const errorPost = document.getElementById('errorPost');
     const errorsSummary = document.getElementById('errorsSummary');
 
-    let valid = false;
+    let valid = true;
 
     resetErrors([locationNameInput, cityInput, streetInput, streetInput, streetNumInput, postCodeInput, postInput], [errorLocationName, errorCity, errorStreet, errorStreetNum, errorPostCode, errorPost], errorsSummary);
 

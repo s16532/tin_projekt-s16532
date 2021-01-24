@@ -17,7 +17,7 @@ function validateForm(){
     const errorReleaseEmp = document.getElementById('errorReleaseEmp');
     const errorsSummary = document.getElementById('errorsSummary');
 
-    let valid = false;
+    let valid = true;
 
     resetErrors([statusInput, locationInput, vehicleInput, admissionDateInput, admissionEmpInput, releaseDateInput, releaseEmpInput], [errorStatus, errorLocation, errorVehicle, errorAdmissionDate, errorAdmissionEmp, errorReleaseDate, errorReleaseEmp], errorsSummary);
 
