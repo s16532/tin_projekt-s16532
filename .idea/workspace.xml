@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/pages/repair/service-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/repair/repair-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/repair/repair-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/validationServiceForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/repair/service-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/repair/service-form.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +38,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/pages/repair" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -54,8 +53,8 @@
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicles" />
@@ -90,7 +89,7 @@
       <workItem from="1610981086099" duration="24654000" />
       <workItem from="1611169527543" duration="597000" />
       <workItem from="1611253173735" duration="542000" />
-      <workItem from="1611430263873" duration="15381000" />
+      <workItem from="1611430263873" duration="15763000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -232,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611452096671</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added service-form.html">
+      <created>1611453017628</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611453017628</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +264,8 @@
     <MESSAGE value="added employer-list.html" />
     <MESSAGE value="added employer-form.html and validationEmployerForm.js" />
     <MESSAGE value="added repair-details.html" />
-    <option name="LAST_COMMIT_MESSAGE" value="added repair-details.html" />
+    <MESSAGE value="added service-form.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="added service-form.html" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607964658921">
@@ -273,10 +280,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607988509703" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1611452095439">
+    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1611453016348">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611452095439" />
+    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611453016348" />
     <state x="934" y="389" key="FileChooserDialogImpl" timestamp="1607988503994">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -297,10 +304,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1256" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611448501820">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611453020007">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611448501820" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611453020007" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611019476112">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
