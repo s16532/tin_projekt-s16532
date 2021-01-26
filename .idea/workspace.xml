@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/validationServiceForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/repair/service-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/repair/service-form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/employer/employer-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employer/employer-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/employer/employer-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employer/employer-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/location/location-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/location-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/location/location-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/location-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/location/location-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/location-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/repair/repair-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/repair-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/repair/repair-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/repair-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/repair/repair-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/repair-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/repair/service-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/service-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/vehicle/vehicle-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/vehicle-details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/vehicle/vehicle-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/vehicle-form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pages/vehicle/vehicle-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/vehicle-list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.ejs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,19 +58,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\location" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\stylesheets" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\docs" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\css" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\pages" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\location" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\stylesheets" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,6 +103,7 @@
       <workItem from="1611169527543" duration="597000" />
       <workItem from="1611253173735" duration="542000" />
       <workItem from="1611430263873" duration="15763000" />
+      <workItem from="1611691903547" duration="2348000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
