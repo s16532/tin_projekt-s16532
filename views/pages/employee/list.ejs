@@ -1,27 +1,4 @@
-<!DOCTYPE html>
-<html lang="pl-PL">
-<head>
-    <link rel="stylesheet" href="/css/style.css" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serwis Samochodowy TOP-SERVICE</title>
-</head>
-<body>
-
-<header>
-    <h1>Serwis Samochodowy TOP-SERVICE</h1>
-    <img src="/images/logo.jpg"  alt="Serwis Samochodowy TOP-SERVICE" >
-</header>
-
-<nav>
-    <ul>
-        <li><a href="/index.html">Strona Główna</a></li>
-        <li><a href="/pages/repair/repair-list.html">Naprawy</a></li>
-        <li><a href="/pages/location/location-list.html">Warsztaty</a></li>
-        <li><a href="/pages/vehicle/vehicle-list.html">Pojazdy</a></li>
-        <li><a href="/pages/employer/employer-list.html" class="active">Pracownicy</a></li>
-    </ul>
-</nav>
+<%- include('../../fragments/header.ejs')%>
 
 <main>
     <h2>Pracownicy</h2>
@@ -95,8 +72,4 @@
 
 </main>
 
-<footer>
-    Mateusz Jacoszek, s16532
-</footer>
-</body>
-</html>
+<%- include('../../fragments/footer.ejs')%>
