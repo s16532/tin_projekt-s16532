@@ -1,7 +1,7 @@
 <%- include('../../fragments/header.ejs')%>
 
 <main>
-    <h2>Nowa Naprawa</h2>
+    <h2>Nowa Usługa</h2>
     <form class="form" novalidate onsubmit="return validateForm();">
         <label for="service">Usługa<abbr title="required" aria-label="required">*</abbr></label>
         <select name="service" id="service" >
@@ -27,7 +27,7 @@
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
             <input type="submit" class="form-button-submit" value="Dodaj">
-            <a href="/pages/repair/repair-details.html" class="form-button-cancel">Anuluj</a>
+            <a href="/repairs/details/1" class="form-button-cancel">Anuluj</a>
         </div>
     </form>
 </main>

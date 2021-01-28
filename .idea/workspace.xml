@@ -27,35 +27,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/emploeeController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/locationController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/repairController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/repairServiceController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/roleController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/srviceController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/vehicleController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controllers/vehicleTypeController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/employeeRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/locationRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/fragments/footer.ejs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/repairRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/repairServiceRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/vehicleRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/users.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/employer/employer-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/employer/employer-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/location/location-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/location/location-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/location/location-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/repair-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/repair-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/repair-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/service-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/vehicle-details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/vehicle-form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/vehicle-list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/repairController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/repairController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/repairServiceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/repairServiceController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/vehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/vehicleController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationServiceForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationServiceForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/employeeRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/employeeRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/locationRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/locationRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/employee/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/employee/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/location/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/location/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/location/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/repair/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/repair/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/repair/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/service/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repairService/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/details.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +138,9 @@
       <workItem from="1611253173735" duration="542000" />
       <workItem from="1611430263873" duration="15763000" />
       <workItem from="1611691903547" duration="10197000" />
+      <workItem from="1611770303644" duration="2727000" />
+      <workItem from="1611789258267" duration="592000" />
+      <workItem from="1611861846346" duration="7537000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -337,6 +335,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit, Statyczny wygląd aplikacji" />
@@ -415,10 +414,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="0" y="73" width="2213" height="1314" key="dock-window-1/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611713011094" />
-    <state x="987" y="299" width="628" height="801" key="find.popup" timestamp="1611713914389">
+    <state x="987" y="299" width="628" height="801" key="find.popup" timestamp="1611865777234">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="987" y="299" width="628" height="801" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611713914389" />
+    <state x="987" y="299" width="628" height="801" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611865777234" />
     <state x="1048" y="413" key="git4idea.branch.GitSmartOperationDialog" timestamp="1611714295189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

@@ -1,6 +1,6 @@
 function validateForm(){
 
-    const   serviceInput = document.getElementById('service');
+    const   serviceInput = document.getElementById('repairService');
     const   dateInput = document.getElementById('date');
     const   mechanicInput = document.getElementById('mechanic');
 
