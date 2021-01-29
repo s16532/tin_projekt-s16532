@@ -27,30 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/routes/repairRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/repairServiceRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/vehicleRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/repairController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/repairController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/repairServiceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/repairServiceController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/vehicleController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/vehicleController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationServiceForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationServiceForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/employeeRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/employeeRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/locationRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/locationRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/employee/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/employee/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/location/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/location/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/location/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/service/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repairService/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/details.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/details.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +119,8 @@
       <workItem from="1611691903547" duration="10197000" />
       <workItem from="1611770303644" duration="2727000" />
       <workItem from="1611789258267" duration="592000" />
-      <workItem from="1611861846346" duration="7537000" />
+      <workItem from="1611861846346" duration="8876000" />
+      <workItem from="1611930458695" duration="1198000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -296,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611697084093</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added routers and controllers for all groups">
+      <created>1611871350906</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611871350906</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,7 +346,8 @@
     <MESSAGE value="added repair-details.html" />
     <MESSAGE value="added service-form.html" />
     <MESSAGE value="moved htmls to ejs-es" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved htmls to ejs-es" />
+    <MESSAGE value="added routers and controllers for all groups" />
+    <option name="LAST_COMMIT_MESSAGE" value="added routers and controllers for all groups" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607964658921">
@@ -374,10 +362,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611711432434" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1611697082048">
+    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1611871347337">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611697082048" />
+    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611871347337" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1611714633898">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -402,10 +390,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1256" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611697087143">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611871354117">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611697087143" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611871354117" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611019476112">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
