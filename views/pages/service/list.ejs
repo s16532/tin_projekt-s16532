@@ -1,0 +1,52 @@
+<%- include('../../fragments/header.ejs')%>
+
+<main>
+    <h2>Katalog Usług</h2>
+
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Nazwa usługi</th>
+                <th>Cena (PLN)</th>
+                <th>Aktywna</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Wymiana Opon</td>
+                <td>100</td>
+                <td>tak</td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/services/add" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="" class="list-actions-button-delete">Deaktywuj</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Wymiana Oleju (własny olej)</td>
+                <td>70</td>
+                <td>tak</td>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="" class="list-actions-button-delete">Deaktywuj</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p><a href="/employees/add" class="button-add">Dodaj nową usługę</a> </p>
+
+</main>
+
+<%- include('../../fragments/footer.ejs')%>

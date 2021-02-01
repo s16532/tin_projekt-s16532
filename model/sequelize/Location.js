@@ -29,7 +29,7 @@ const Location = sequelize.define('Location', {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    post:{
+    country:{
         type: Sequelize.STRING,
         allowNull: false,
     }

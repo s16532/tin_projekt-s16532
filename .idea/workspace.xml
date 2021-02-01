@@ -27,20 +27,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sequelize/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sequelize/sequelize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Employee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Location.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Repair.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/RepairService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Role.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Status.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Vehicle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/service/form.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/pages/service/list.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sequelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Location.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Location.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Service.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/employee/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/employee/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,26 +69,26 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/views/pages/service" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model\sequelize" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\pages" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\service" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mxjacoszek\WebstormProjects\tin_projekt-s16532\views\pages\service" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mxjacoszek\WebstormProjects\tin_projekt-s16532\views\pages" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model\sequelize" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\pages" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\service" />
     </key>
   </component>
   <component name="RunManager">
@@ -132,6 +126,7 @@
       <workItem from="1611789258267" duration="592000" />
       <workItem from="1611861846346" duration="8876000" />
       <workItem from="1611930458695" duration="12234000" />
+      <workItem from="1612178672246" duration="6937000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>

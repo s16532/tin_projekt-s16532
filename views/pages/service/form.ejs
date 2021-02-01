@@ -1,0 +1,25 @@
+<%- include('../../fragments/header.ejs')%>
+
+<script type="application/javascript" src="/js/validationCommon.js"></script>
+<script type="application/javascript" src="/js/validationServiceForm.js"></script>
+
+<main>
+    <h2>Nowa Usługa</h2>
+    <form class="form" novalidate onsubmit="return validateForm();">
+        <label for="name">Nazwa usługi<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="name" id="name" />
+        <span id="errorName" class="errors-text"></span>
+
+        <label for="price">Cena<sup>*</sup></label>
+        <input type="text" name="price" id="price" />
+        <span id="errorPrice" class="errors-text"></span>
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <input type="submit" class="form-button-submit" value="Dodaj">
+            <a href="/employees" class="form-button-cancel">Anuluj</a>
+        </div>
+    </form>
+</main>
+
+<%- include('../../fragments/footer.ejs')%>
