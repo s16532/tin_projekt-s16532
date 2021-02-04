@@ -62,7 +62,7 @@ module.exports = () => {
     constraints: true,
     onDelete: 'CASCADE'
   });
-  RepairService.belongsTo(Status, {as: 'statuses', foreignKey: {name: 'status_id', allowNull: false}});
+  RepairService.belongsTo(Status, {as: 'status', foreignKey: {name: 'status_id', allowNull: false}});
 
 //VEHICLE --- REPAIR
   Vehicle.hasMany(Repair, {

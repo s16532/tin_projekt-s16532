@@ -27,21 +27,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/repository/sequelize/EmployeeRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/sequelize/LocationRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/sequelize/StatusRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/sequelize/VehicleRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/sequelize/RepairRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/sequelize/RepairServiceRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/sequelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/sequelize/sequelize.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/sequelize.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Employee.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Repair.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Repair.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/RepairService.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/RepairService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Vehicle.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Vehicle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/StatusRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StatusRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/VehicleRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/VehicleRepository.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +125,7 @@
       <workItem from="1611789258267" duration="592000" />
       <workItem from="1611861846346" duration="8876000" />
       <workItem from="1611930458695" duration="12234000" />
+      <workItem from="1612458540083" duration="3867000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>

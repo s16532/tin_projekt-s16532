@@ -11,7 +11,7 @@ exports.getVehicles = () => {
 };
 
 exports.getVehicleById = (vehicleId) => {
-    return Location.findByPk(vehicleId,
+    return Vehicle.findByPk(vehicleId,
         {
             include: [{
                 model: Repair,
@@ -23,29 +23,36 @@ exports.getVehicleById = (vehicleId) => {
                         model: Service,
                         as: 'service'
                     }]
+                }, {
+                    model: Status,
+                    as: 'status'
+                }, {
+                    model: Location,
+                    as: 'location'
                 }]
-            }, {
-                model: Location,
-                as: 'location'
             }]
         });
 };
 
-exports.createService = (data) => {
-    return Service.create({
-        name: data.name,
-        price: data.price,
-        active: data.action,
+exports.createVehicle = (data) => {
+    return Vehicle.create({
+        VIN: data.VIN,
+        type: data.type,
+        brand: data.brand,
+        model: data.model,
+        productionYear: data.productionYear,
+        engineType: data.engineType,
+        engineSize: data.engineSize,
     });
 };
 
-exports.updateService = (serviceId, data) => {
-    return Service.update(data, {where: {id: serviceId }});
+exports.updateVehicle = (vehicleId, data) => {
+    return Vehicle.update(data, {where: {id: vehicleId }});
 };
 
-exports.deleteService = (serviceId) => {
-    return Location.destroy({
-        where: { id: serviceId }
+exports.deleteVehicle = (vehicleId) => {
+    return Vehicle.destroy({
+        where: { id: vehicleId }
     });
 
 };

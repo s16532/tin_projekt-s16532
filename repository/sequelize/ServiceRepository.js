@@ -11,7 +11,7 @@ exports.getServices = () => {
 };
 
 exports.getServiceById = (serviceId) => {
-    return Location.findByPk(serviceId,
+    return Service.findByPk(serviceId,
         {
             include: [{
                 model: RepairService,
@@ -33,7 +33,7 @@ exports.updateService = (serviceId, data) => {
 };
 
 exports.deleteService = (serviceId) => {
-    return Location.destroy({
+    return Service.destroy({
         where: { id: serviceId }
     });
 

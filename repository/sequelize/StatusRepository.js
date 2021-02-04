@@ -11,7 +11,7 @@ exports.getStatus = () => {
 };
 
 exports.getStatusById = (statusId) => {
-    return Location.findByPk(statusId,
+    return Status.findByPk(statusId,
         {
             include: [{
                 model: Repair,
