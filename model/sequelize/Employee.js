@@ -16,10 +16,6 @@ const Employee = sequelize.define('Employee', {
         type: Sequelize.STRING,
         allowNull: false,
     },
-    role_id:{
-        type: Sequelize.INTEGER,
-        allowNull: false,
-    },
     uname:{
         type: Sequelize.STRING,
         allowNull: false,

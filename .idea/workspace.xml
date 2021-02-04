@@ -27,20 +27,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sequelize/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/sequelize/sequelize.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Employee.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Location.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Repair.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/RepairService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Role.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Status.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/sequelize/Vehicle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/sequelize/EmployeeRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/sequelize/LocationRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/sequelize/StatusRepository.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/repository/sequelize/VehicleRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sequelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sequelize/sequelize.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/sequelize.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Repair.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Repair.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/RepairService.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/RepairService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Vehicle.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Vehicle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/repair/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -301,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611957447657</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="merge">
+      <created>1612385833726</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612385833726</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -366,13 +374,14 @@
     <MESSAGE value="moved htmls to ejs-es" />
     <MESSAGE value="added routers and controllers for all groups" />
     <MESSAGE value="restored validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="restored validation" />
+    <MESSAGE value="merge" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607964658921">
+    <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612402225115">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964658921" />
+    <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612402225115" />
     <state x="1031" y="502" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611712697054">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -381,18 +390,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611711432434" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1611957445586">
+    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1612385832264">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611957445586" />
+    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612385832264" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1611714633898">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611714633898" />
-    <state x="934" y="389" key="FileChooserDialogImpl" timestamp="1607988503994">
+    <state x="934" y="389" key="FileChooserDialogImpl" timestamp="1612402095019">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="934" y="389" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607988503994" />
+    <state x="934" y="389" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612402095019" />
     <state width="1256" height="400" key="GridCell.Tab.0.bottom" timestamp="1607964596721">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -409,14 +418,18 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="1256" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1611957449889">
+    <state x="781" y="345" key="SettingsEditor" timestamp="1612397135910">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611957449889" />
-    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611019476112">
+    <state x="781" y="345" key="SettingsEditor/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612397135910" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612385835426">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611019476112" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612385835426" />
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612385813056">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612385813056" />
     <state x="0" y="73" width="2213" height="1314" key="dock-window-1" timestamp="1611713011094">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -441,9 +454,9 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="936" y="330" key="run.anything.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611016481995" />
-    <state x="943" y="315" key="search.everywhere.popup" timestamp="1611971375126">
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1612406932419">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="943" y="315" key="search.everywhere.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611971375126" />
+    <state x="943" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612406932419" />
   </component>
 </project>

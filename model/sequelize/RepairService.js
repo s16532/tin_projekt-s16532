@@ -13,7 +13,7 @@ const RepairService = sequelize.define('RepairService', {
         allowNull: false,
     },
     service_id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
     },
     date:{

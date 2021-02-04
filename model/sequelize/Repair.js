@@ -16,8 +16,8 @@ const Repair = sequelize.define('Repair', {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
-    vehicle_VIN: {
-        type: Sequelize.STRING,
+    vehicle_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
     },
     admissionDate:{
