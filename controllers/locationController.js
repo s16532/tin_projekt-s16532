@@ -1,7 +1,6 @@
 const LocationRepository = require('../repository/sequelize/LocationRepository');
 
 exports.showLocationList = (req, res, next) => {
-    console.log("coś")
     LocationRepository.getLocations()
         .then(locs => {
             res.render('pages/location/list', {
