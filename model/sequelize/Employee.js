@@ -23,12 +23,8 @@ const Employee = sequelize.define('Employee', {
     },
     passwd:{
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
-    active:{
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-    }
 });
 
 module.exports = Employee;

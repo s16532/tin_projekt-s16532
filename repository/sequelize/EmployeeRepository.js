@@ -21,7 +21,7 @@ exports.getEmployeeById = (empId) => {
                 as: 'releases'
             }, {
                 model: RepairService,
-                as: 'mechanic'
+                as: 'repair_services'
             }]
         });
 };
@@ -37,11 +37,6 @@ exports.createEmployee = (newEmpData) => {
 };
 
 exports.updateEmployee = (empId, empData) => {
-    const lastName = empData.lastName;
-    const firstName = empData.firstName;
-    const uname = empData.uname;
-    const passwd = empData.passwd;
-    const active = empData.active;
     return Employee.update(empData, {where: {id: empId }});
 };
 

@@ -9,59 +9,30 @@
                 <th>Nazwa użytkownika</th>
                 <th>Nazwisko</th>
                 <th>Imie</th>
-                <th>Aktywny</th>
                 <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
+        <% for (let emp of emps) { %>
             <tr>
-                <td>amarchewka</td>
-                <td>Marchewka</td>
-                <td>Apolonia</td>
-                <td>Tak</td>
+                <td><%= emp.uname %></td>
+                <td><%= emp.lastName %></td>
+                <td><%= emp.firstName %></td>
                 <td>
                     <ul class="list-actions">
                         <li>
-                            <a href="/employees/add" class="list-actions-button-edit">Edytuj</a>
+                            <a href="/employees/details/<%= emp.id %>" class="list-actions-button-details">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="" class="list-actions-button-delete">Zablokuj</a>
+                            <a href="/employees/edit/<%= emp.id %>" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="/employees/delete/<%= emp.id %>" class="list-actions-button-delete">Usuń</a>
                         </li>
                     </ul>
                 </td>
             </tr>
-            <tr>
-                <td>anowak</td>
-                <td>Nowak</td>
-                <td>Adam</td>
-                <td>Tak</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a href="" class="list-actions-button-edit">Edytuj</a>
-                        </li>
-                        <li>
-                            <a href="" class="list-actions-button-delete">Zablokuj</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-            <tr>
-                <td>mkowalski</td>
-                <td>Kowalski</td>
-                <td>Marian</td>
-                <td>Tak</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a href="" class="list-actions-button-edit">Edytuj</a>
-                        </li>
-                        <li>
-                            <a href="" class="list-actions-button-delete">Zablokuj</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+        <% } %>
         </tbody>
     </table>
     <p><a href="/employees/add" class="button-add">Dodaj nowego pracownika</a> </p>

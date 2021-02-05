@@ -4,24 +4,37 @@
 <script type="application/javascript" src="/js/validationEmployerForm.js"></script>
 
 <main>
-    <h2>Nowy Pracownik</h2>
-    <form class="form" novalidate onsubmit="return validateForm();">
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+        <input type="hidden" name="id" value="<%= emp.id %>">
         <label for="uname">Nazwa użytkownika<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="uname" id="uname" />
+        <input type="text" name="uname" id="uname" placeholder="" value="<%= emp.uname%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
         <span id="errorUname" class="errors-text"></span>
 
         <label for="lastName">Nazwisko<sup>*</sup></label>
-        <input type="text" name="lastName" id="lastName" />
+        <input type="text" name="lastName" id="lastName" placeholder="" value="<%= emp.lastName%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
         <span id="errorLastName" class="errors-text"></span>
 
         <label for="firstName">Imie<sup>*</sup></label>
-        <input type="text" name="firstName" id="firstName" />
+        <input type="text" name="firstName" id="firstName" placeholder="" value="<%= emp.firstName%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
         <span id="errorFirstName" class="errors-text"></span>
+
+        <% if (formMode == 'showDetails') { %>
+            <div class="section-buttons">
+                <a href="/employees/edit/<%= emp.id %>" class="list-actions-button-edit ">Edytuj</a>
+            </div>
+        <% } %>
+
+        </div>
 
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
-            <input type="submit" class="form-button-submit" value="Dodaj">
-            <a href="/employees" class="form-button-cancel">Anuluj</a>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/employees">Anuluj</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/employees">Powrót</a>
+            <% } %>
         </div>
     </form>
 </main>
