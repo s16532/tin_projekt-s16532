@@ -16,48 +16,29 @@
             </tr>
         </thead>
         <tbody>
+        <% for (let loc of locs) { %>
             <tr>
-                <td>Warszawa-Jerozolimskie</td>
-                <td>Warszawa</td>
-                <td>Aleje Jerozolimskie</td>
-                <td>147</td>
-                <td>02-326</td>
-                <td>Polska</td>
+                <td><%= loc.name %></td>
+                <td><%= loc.city %></td>
+                <td><%= loc.street %></td>
+                <td><%= loc.streetNum %></td>
+                <td><%= loc.postCode %></td>
+                <td><%= loc.country %></td>
                 <td>
                     <ul class="list-actions">
                         <li>
-                            <a href="/locations/details/1" class="list-actions-button-details">Szczegóły</a>
+                            <a href="/locations/details/<%=loc.id%>" class="list-actions-button-details">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="/locations/add" class="list-actions-button-edit">Edytuj</a>
+                            <a href="/locations/edit/<%=loc.id%>" class="list-actions-button-edit">Edytuj</a>
                         </li>
                         <li>
-                            <a href="" class="list-actions-button-delete">Usuń</a>
+                            <a href="/locations/delete/<%=loc.id%>" class="list-actions-button-delete">Usuń</a>
                         </li>
                     </ul>
                 </td>
             </tr>
-            <tr>
-                <td>Poznań-Krzesiny</td>
-                <td>Poznań</td>
-                <td>Ożarowska</td>
-                <td>42</td>
-                <td>61-332</td>
-                <td>Polska</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a href="" class="list-actions-button-details">Szczegóły</a>
-                        </li>
-                        <li>
-                            <a href="" class="list-actions-button-edit">Edytuj</a>
-                        </li>
-                        <li>
-                            <a href="" class="list-actions-button-delete">Usuń</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+        <% } %>
         </tbody>
     </table>
     <p><a href="/locations/add" class="button-add">Dodaj nowy warsztat</a> </p>

@@ -15,7 +15,14 @@ exports.getLocationById = (locationId) => {
         {
             include: [{
                 model: Repair,
-                as: 'repairs'
+                as: 'repairs',
+                include: [{
+                    model: Vehicle,
+                    as: 'vehicle'
+                },{
+                    model: Status,
+                    as: 'status'
+                }]
             }]
         });
 };

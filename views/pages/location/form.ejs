@@ -1,35 +1,89 @@
 <%- include('../../fragments/header.ejs')%>
 
-<script type="application/javascript" src="/js/validationCommon.js"></script>
-<script type="application/javascript" src="/js/validationLocationForm.js"></script>
+
 
 <main>
-    <h2>Nowy Warsztat</h2>
-    <form class="form" novalidate onsubmit="return validateForm();">
-        <label for="locationName">Nazwa Warsztatu<abbr title="required" aria-label="required">*</abbr></label>
-            <input type="text" name="locationName" id="locationName" />
+    <script type="application/javascript" src="/js/validationCommon.js"></script>
+    <script type="application/javascript" src="/js/validationLocationForm.js"></script>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+        <label for="name">Nazwa Warsztatu<abbr title="required" aria-label="required">*</abbr></label>
+            <input type="hidden" name="id" value="<%= loc.id %>">
+            <input type="text" name="name" id="name" placeholder="tbd" value="<%= loc.name%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <span id="errorLocationName" class="errors-text"></span>
             <label for="city">Miasto<sup>*</sup></label>
-            <input type="text" name="city" id="city" />
+            <input type="text" name="city" id="city" placeholder="tbd" value="<%= loc.city%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <span id="errorCity" class="errors-text"></span>
             <label for="street">Ulica<sup>*</sup></label>
-            <input type="text" name="street" id="street" />
+            <input type="text" name="street" id="street" placeholder="tbd" value="<%= loc.street%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <span id="errorStreet" class="errors-text"></span>
             <label for="streetNum">Numer Ulicy<sup>*</sup></label>
-            <input type="text" name="streetNum" id="streetNum" />
+            <input type="text" name="streetNum" id="streetNum" placeholder="tbd" value="<%= loc.streetNum%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <span id="errorStreetNum" class="errors-text"></span>
             <label for="postCode">Kod Pocztowy<sup>*</sup></label>
-            <input type="text" name="postCode" id="postCode" />
+            <input type="text" name="postCode" id="postCode" placeholder="tbd" value="<%= loc.postCode%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <span id="errorPostCode" class="errors-text"></span>
-            <label for="post">Poczta<sup>*</sup></label>
-            <input type="text" name="post" id="post" />
+            <label for="country">Kraj<sup>*</sup></label>
+            <input type="text" name="country" id="country" placeholder="tbd" value="<%= loc.country%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <span id="errorPost" class="errors-text"></span>
+        <% if (formMode == 'showDetails') { %>
+            <div class="section-buttons">
+                <a href="/locations/edit/<%= loc.id %>" class="list-actions-button-edit ">Edytuj</a>
+            </div>
+        <% } %>
+
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
-            <input type="submit" class="form-button-submit" value="Dodaj">
-            <a href="/locations" class="form-button-cancel">Anuluj</a>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/locations">Anuluj</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/locations">Powrót</a>
+            <% } %>
         </div>
     </form>
+
+    <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+        <h2>Naprawy</h2>
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>VIN</th>
+                <th>Data Przyjęcia</th>
+                <th>Data Zakończenia</th>
+                <th>Akcje</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (let l of loc.repairs) { %>
+                <tr>
+                    <td><a href="/repairs/details/<%= l.id %>"><%= l.id %></a></td>
+                    <td><%= l.vehicle.brand %></td>
+                    <td><%= l.vehicle.model %></td>
+                    <td><%= l.vehicle.VIN %></td>
+                    <td><%= l.admissionDate.toISOString().split('T')[0] %></td>
+                    <td><%= (l.releaseDate == null) ? l.status.name : l.releaseDate.toISOString().split('T')[0] %></td>
+                    <td>
+                        <ul class="list-actions">
+                            <li>
+                                <a href="/repairs/details/<%= l.id %>" class="list-actions-button-details">Szczegóły</a>
+                            </li>
+                            <li>
+                                <a href="/vehicles/details/<%= l.vehicle.id %>" class="list-actions-button-vehicle">Pojazd</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    <% } %>
+
+
+
 </main>
 
 <%- include('../../fragments/footer.ejs')%>
