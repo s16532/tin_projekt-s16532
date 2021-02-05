@@ -13,7 +13,7 @@ module.exports = () => {
 //EMPLOYEE --- REPAIR (ADMISSION)
   Employee.hasMany(Repair, {
     as: 'admissions',
-    foreignKey: {name: 'admissionEmps', allowNull: false},
+    foreignKey: {name: 'admissionEmp', allowNull: false},
     constraints: true,
     onDelete: 'CASCADE'
   });
@@ -22,7 +22,7 @@ module.exports = () => {
 //EMPLOYEE --- REPAIR (RELEASE)
   Employee.hasMany(Repair, {
     as: 'releases',
-    foreignKey: {name: 'releaseEmps', allowNull: true},
+    foreignKey: {name: 'releaseEmp', allowNull: true},
     constraints: true,
     onDelete: 'CASCADE'
   });
@@ -62,7 +62,7 @@ module.exports = () => {
     constraints: true,
     onDelete: 'CASCADE'
   });
-  RepairService.belongsTo(Status, {as: 'status', foreignKey: {name: 'status_id', allowNull: false}});
+  Repair.belongsTo(Status, {as: 'status', foreignKey: {name: 'status_id', allowNull: false}});
 
 //VEHICLE --- REPAIR
   Vehicle.hasMany(Repair, {
@@ -80,7 +80,7 @@ module.exports = () => {
     constraints: true,
     onDelete: 'CASCADE'
   });
-  RepairService.belongsTo(Location, {as: 'location', foreignKey: {name: 'location_id', allowNull: false}});
+  Repair.belongsTo(Location, {as: 'location', foreignKey: {name: 'location_id', allowNull: false}});
 
 
   let allEmps, allLocs, allServs, allVehs, allStatuses, allRepServ, allReps;
@@ -100,7 +100,7 @@ module.exports = () => {
             {name: 'Wydany'},
           ])
               .then(() => {
-                return Employee.findAll();
+                return Status.findAll();
               });
         } else {
           return statuses;
@@ -118,7 +118,7 @@ module.exports = () => {
             {name: 'Wymiana klocków hamulcowych jedna oś', price: 500, active: true},
           ])
               .then(() => {
-                return Employee.findAll();
+                return Service.findAll();
               });
         } else {
           return servs;
@@ -226,37 +226,37 @@ module.exports = () => {
       })
       .then(emps => {
         allEmps = emps;
-        return RepairService.findAll(); //zwrot podstawy do następnej operacji
+        return Repair.findAll(); //zwrot podstawy do następnej operacji
       })
       .then(reps => {
         if (!reps || reps.length == 0) {
           return Repair.bulkCreate([
             {
-              status_id: allStatuses[5],
-              location_id: allLocs[0],
-              vehicle_VIN: allVehs[0],
+              status_id: allStatuses[5].id,
+              location_id: allLocs[0].id,
+              vehicle_id: allVehs[0].id,
               admissionDate: '2020-12-01',
-              admissionEmp: allEmps[0],
+              admissionEmp: allEmps[0].id,
               releaseDate: "2020-12-05",
-              releaseEmp: allEmps[3]
+              releaseEmp: allEmps[2].id
             },
             {
-              status_id: allStatuses[4],
-              location_id: allLocs[0],
-              vehicle_VIN: allVehs[1],
+              status_id: allStatuses[4].id,
+              location_id: allLocs[0].id,
+              vehicle_id: allVehs[1].id,
               admissionDate: '2020-12-02',
-              admissionEmp: allEmps[0],
+              admissionEmp: allEmps[0].id,
               releaseDate: null,
               releaseEmp: null
             },
             {
-              status_id: allStatuses[5],
-              location_id: allLocs[1],
-              vehicle_VIN: allVehs[0],
+              status_id: allStatuses[5].id,
+              location_id: allLocs[1].id,
+              vehicle_id: allVehs[0].id,
               admissionDate: '2021-01-11',
-              admissionEmp: allEmps[2],
+              admissionEmp: allEmps[2].id,
               releaseDate: "2020-01-18",
-              releaseEmp: allEmps[2]
+              releaseEmp: allEmps[2].id
             },
           ])
               .then(() => {
@@ -271,20 +271,20 @@ module.exports = () => {
         return RepairService.findAll(); //zwrot podstawy do następnej operacji
       })
       .then(repServs => {
-        if (!repServ || repServs.length == 0) {
+        if (!repServs || repServs.length == 0) {
           return RepairService.bulkCreate([
             {
-              repair_id: allReps[0],
-              serivce_id: allServs[0],
+              repair_id: allReps[0].id,
+              service_id: allServs[0].id,
               date: '2020-12-02',
-              employee_id: allEmps[3],
+              employee_id: allEmps[2].id,
             },
 
             {
-              repair_id: allReps[0],
-              serivce_id: allServs[2],
+              repair_id: allReps[0].id,
+              service_id: allServs[2].id,
               date: '2020-12-04',
-              employee_id: allEmps[3],
+              employee_id: allEmps[2].id,
             },
           ])
               .then(() => {

@@ -27,13 +27,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/repository/sequelize/RepairRepository.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/repository/sequelize/RepairServiceRepository.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/sequelize/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/sequelize/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/StatusRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/StatusRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/VehicleRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/VehicleRepository.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +67,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -125,7 +121,7 @@
       <workItem from="1611789258267" duration="592000" />
       <workItem from="1611861846346" duration="8876000" />
       <workItem from="1611930458695" duration="12234000" />
-      <workItem from="1612458540083" duration="3867000" />
+      <workItem from="1612458540083" duration="7207000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -302,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612385833726</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added all repositories">
+      <created>1612482477421</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612482477421</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,7 +371,8 @@
     <MESSAGE value="added routers and controllers for all groups" />
     <MESSAGE value="restored validation" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="added all repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="added all repositories" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612402225115">
@@ -383,10 +387,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611711432434" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1612385832264">
+    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1612482475212">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612385832264" />
+    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612482475212" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1611714633898">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -415,10 +419,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="781" y="345" key="SettingsEditor/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612397135910" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612385835426">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612482484253">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612385835426" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612482484253" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612385813056">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -427,10 +431,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="0" y="73" width="2213" height="1314" key="dock-window-1/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611713011094" />
-    <state x="987" y="299" width="628" height="801" key="find.popup" timestamp="1611865777234">
+    <state x="1640" y="344" width="628" height="801" key="find.popup" timestamp="1612485258370">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="987" y="299" width="628" height="801" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611865777234" />
+    <state x="1640" y="344" width="628" height="801" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612485258370" />
     <state x="1048" y="413" key="git4idea.branch.GitSmartOperationDialog" timestamp="1611714295189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
