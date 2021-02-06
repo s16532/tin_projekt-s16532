@@ -15,95 +15,39 @@
                 <th>Pracownik Przyjmujący</th>
                 <th>Data Zakończenia</th>
                 <th>Pracownik Wydający</th>
-                <th>Do zapłaty</th>
                 <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
+        <% for (let rep of reps) { %>
         <tr>
-            <td>1</td>
-            <td>Warszawa-Jerozolimskie</td>
-            <td>Opel</td>
-            <td>Corsa</td>
-            <td>1NXBU4EE0AZ325696</td>
-            <td>2020-12-1</td>
-            <td>Apolonia Marchewka</td>
-            <td>2020-12-5</td>
-            <td>Adam Nowak</td>
-            <td>120 PLN</td>
+            <td><%= rep.id %></td>
+            <td><%= rep.location.name %></td>
+            <td><%= rep.vehicle.brand %></td>
+            <td><%= rep.vehicle.model %></td>
+            <td><%= rep.vehicle.VIN %></td>
+            <td><%= rep.admissionDate %></td>
+            <td><%= rep.admission_Emp.firstName + ' ' + rep.admission_Emp.lastName%></td>
+            <td><%= (rep.releaseDate == null) ? rep.status.name : rep.releaseDate %></td>
+            <td><%= (rep.releaseEmp == null) ? '' : rep.release_Emp.firstName + ' ' + rep.release_Emp.lastName %></td>
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="" class="list-actions-button-vehicle">Pojazd</a>
+                        <a href="/vehicles/details/<%= rep.vehicle.id %>" class="list-actions-button-vehicle">Pojazd</a>
                     </li>
                     <li>
-                        <a href="/repairs/details/1" class="list-actions-button-details">Szczegóły</a>
+                        <a href="/repairs/details/<%= rep.id %>" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
-                        <a href="/repairs/add" class="list-actions-button-edit">Edytuj</a>
+                        <a href="/repairs/edit/<%= rep.id %>" class="list-actions-button-edit">Edytuj</a>
                     </li>
                     <li>
-                        <a href="" class="list-actions-button-delete">Usuń</a>
+                        <a href="/repairs/delete/<%= rep.id %>" class="list-actions-button-delete">Usuń</a>
                     </li>
                 </ul>
             </td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Warszawa-Jerozolimskie</td>
-            <td>Fiat</td>
-            <td>500</td>
-            <td>JS2RA62SX65342742</td>
-            <td>2020-12-2</td>
-            <td>Apolonia Marchewka</td>
-            <td>Na warsztacie</td>
-            <td>Adam Nowak</td>
-            <td>100 PLN</td>
-            <td>
-                <ul class="list-actions">
-                    <li>
-                        <a href="" class="list-actions-button-vehicle">Pojazd</a>
-                    </li>
-                    <li>
-                        <a href="" class="list-actions-button-details">Szczegóły</a>
-                    </li>
-                    <li>
-                        <a href="/repairs/add" class="list-actions-button-edit">Edytuj</a>
-                    </li>
-                    <li>
-                        <a href="" class="list-actions-button-delete">Usuń</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Poznań-Krzesiny</td>
-            <td>Opel</td>
-            <td>Corsa</td>
-            <td>1NXBU4EE0AZ325696</td>
-            <td>2021-01-11</td>
-            <td>Marian Kowalski</td>
-            <td>2021-01-18</td>
-            <td>Marian Kowalski</td>
-            <td>50 PLN</td>
-            <td>
-                <ul class="list-actions">
-                    <li>
-                        <a href="" class="list-actions-button-vehicle">Pojazd</a>
-                    </li>
-                    <li>
-                        <a href="" class="list-actions-button-details">Szczegóły</a>
-                    </li>
-                    <li>
-                        <a href="/repairs   /add" class="list-actions-button-edit">Edytuj</a>
-                    </li>
-                    <li>
-                        <a href="" class="list-actions-button-delete">Usuń</a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
+        <% } %>
         </tbody>
     </table>
     <p><a href="/repairs/add" class="button-add">Dodaj nową naprawę</a> </p>

@@ -17,7 +17,7 @@ const RepairService = sequelize.define('RepairService', {
         allowNull: false,
     },
     date:{
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
     },
     employee_id:{

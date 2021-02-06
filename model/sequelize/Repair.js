@@ -21,7 +21,7 @@ const Repair = sequelize.define('Repair', {
         allowNull: false,
     },
     admissionDate:{
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: false,
     },
     admissionEmp:{
@@ -29,7 +29,7 @@ const Repair = sequelize.define('Repair', {
         allowNull: false,
     },
     releaseDate:{
-        type: Sequelize.DATE,
+        type: Sequelize.DATEONLY,
         allowNull: true,
     },
     releaseEmp:{

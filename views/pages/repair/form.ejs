@@ -4,70 +4,153 @@
 <script type="application/javascript" src="/js/validationRepairForm.js"></script>
 
 <main>
-    <h2>Nowa Naprawa</h2>
-    <form class="form" novalidate onsubmit="return validateForm();">
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+
+        <input type="hidden" name="id" value="<%= rep.id %>">
+
         <label for="id">ID</label>
-        <input type="text" name="id" id="id" value="1" disabled="true"/>
+        <input type="text" name="id" id="id" value="<%= (formMode == 'createNew') ? 'Nowa naprawa' : rep.id %>" disabled="true"/>
         <span></span>
 
         <label for="status">Status<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="status" id="status" >
-            <option value="1">Przyjęty</option>
-            <option value="2">Diagnoza</option>
-            <option value="3">Oczekuje</option>
-            <option value="4">Na warsztacie</option>
-            <option value="5">Gotowy do odbioru</option>
-            <option value="6">Wydany</option>
+        <select name="status_id" id="status" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
+            <option value="">--- Wybierz status ---</option>
+            <% for (let i=0; i < allStatuses.length; i++) { let stat = allStatuses[i]; %>
+            <option value="<%= stat.id %>" label="<%= stat.name%>"
+            <%= (rep.id && stat.id.toString() == rep.status.id.toString()) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
         <span id="errorStatus" class="errors-text"></span>
 
         <label for="location">Warsztat<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="location" id="location" >
+        <select name="location_id" id="location" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz warsztat ---</option>
-            <option value="Warszawa-Jerozolimskie">Warszawa-Jerozolimskie</option>
-            <option value="Poznań-Krzesiny">Poznań-Krzesiny</option>
+            <% for (let i=0; i < allLocations.length; i++) { let loc = allLocations[i]; %>
+            <option value="<%= loc.id %>" label="<%= loc.name%>"
+                    <%= (rep.id && loc.name == rep.location.name) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
         <span id="errorLocation" class="errors-text"></span>
 
         <label for="vehicle">Pojazd<sup>*</sup></label>
-        <select name="vehicle" id="vehicle" >
+        <select name="vehicle_id" id="vehicle" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz pojazd ---</option>
-            <option value="1NXBU4EE0AZ325696">1NXBU4EE0AZ325696</option>
-            <option value="JS2RA62SX65342742">JS2RA62SX65342742</option>
+            <% for (let i=0; i < allVehicles.length; i++) { let veh = allVehicles[i]; %>
+            <option value="<%= veh.id %>" label="<%= veh.VIN%>"
+                    <%= (rep.id && veh.VIN == rep.vehicle.VIN) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
         <span id="errorVehicle" class="errors-text"></span>
 
-        <label for="admissionDate">Data przyjęcia<sup>*</sup></label>
-        <input type="text" name="admissionDate" value="yyyy-mm-dd" id="admissionDate" />
-        <span id="errorAdmissionDate" class="errors-text"></span>
+        <% if(formMode == 'createNew') { %>
+            <label for="admissionDate">Data przyjęcia<sup>*</sup></label>
+            <input type="text" name="admissionDate"  id="admissionDate" placeholder=""  value="<%= rep.admissionDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <span id="errorAdmissionDate" class="errors-text"></span>
+        <% } else { %>
+            <label for="admissionDate">Data przyjęcia<sup>*</sup></label>
+            <input type="text" name="admissionDate"  id="admissionDate" placeholder=""  value="<%= rep.admissionDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <span id="errorAdmissionDate" class="errors-text"></span>
+        <% } %>
+
 
         <label for="admissionEmp">Pracownik Przyjmujący<sup>*</sup></label>
-        <select name="admissionEmp" id="admissionEmp" >
+        <select name="admissionEmp" id="admissionEmp" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz pracownika ---</option>
-            <option value="1">Adam Nowak</option>
-            <option value="2">Marian Kowalski</option>
-            <option value="3">Apolonia Marchewka</option>
+            <% for (let i=0; i < allAdmEmps.length; i++) { let aEmp = allAdmEmps[i]; %>
+            <option value="<%= aEmp.id %>" label="<%= aEmp.firstName + ' ' + aEmp.lastName%>"
+                    <%= (rep.id && aEmp.id == rep.admissionEmp) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
         <span id="errorAdmissionEmp" class="errors-text"></span>
 
-        <label for="releaseDate">Data zakończenia</label>
-        <input type="text" name="releaseDate" value="" id="releaseDate" />
-        <span id="errorReleaseDate" class="errors-text"></span>
+        <% if(formMode == 'createNew') { %>
+            <label for="releaseDate">Data zakończenia</label>
+            <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= (rep.releaseDate == '') ? 'NULL' : rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <span id="errorReleaseDate" class="errors-text"></span>
+        <% } %>
+        <% if(formMode == 'edit') { %>
+            <label for="releaseDate">Data zakończenia</label>
+            <% if(rep.releaseDate != null) { %>
+                <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <% } else { %>
+                <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <% } %>
+            <span id="errorReleaseDate" class="errors-text"></span>
+        <% } %>
+        <% if(formMode == 'showDetails') { %>
+            <label for="releaseDate">Data zakończenia</label>
+            <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <span id="errorReleaseDate" class="errors-text"></span>
+        <% } %>
 
-        <label for="releaseEmp">Pracownik Wydający</label>
-        <select name="releaseEmp" id="releaseEmp" >
+        <label for="releaseEmp_id">Pracownik Wydający</label>
+        <select name="releaseEmp" id="releaseEmp_id" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz pracownika ---</option>
-            <option value="1">Adam Nowak</option>
-            <option value="2">Marian Kowalski</option>
-            <option value="3">Apolonia Marchewka</option>
+            <% if (rep.releaseEmp !== null || formMode == 'edit' ) {%>
+            <% for (let i=0; i < allRelEmps.length; i++) { let rEmp = allRelEmps[i]; %>
+            <option value="<%= rEmp.id %>" label="<%= rEmp.firstName + ' ' + rEmp.lastName%>"
+                    <%= (rep.id && rEmp.id == rep.releaseEmp) ? 'selected' : ''%>></option>
+            <% } %>
+            <% } %>
         </select>
         <span id="errorReleaseEmp" class="errors-text"></span>
+        <% if (formMode == 'showDetails') { %>
+            <div class="section-buttons">
+                <a href="/repairs/edit/<%= rep.id %>" class="list-actions-button-edit ">Edytuj</a>
+            </div>
+        <% } %>
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
-            <input type="submit" class="form-button-submit" value="Dodaj">
-            <a href="/repairs" class="form-button-cancel">Anuluj</a>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/repairs">Anuluj</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/repiars">Powrót</a>
+            <% } %>
         </div>
     </form>
+
+    <% if (formMode == 'showDetails') { %>
+    <h2>Usługi</h2>
+
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Data</th>
+            <th>Pracownik</th>
+            <th>Cena</th>
+            <th>Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for (let i=0; i < allRepServs.length; i++) { let repServ = allRepServs[i]; %>
+        <tr>
+            <td><%= repServ.service.name %></td>
+            <td><%= repServ.date %></td>
+            <td><%= repServ.mechanic.firstName + ' ' + repServ.mechanic.lastName %></td>
+            <td><%= repServ.service.price %></td>
+            <td>
+                <ul class="list-actions">
+                    <li>
+                        <a href="/services/details/<%= repServ.service.id %>" class="list-actions-button-details">Szczegóły</a>
+                    </li>
+                    <li>
+                        <a href="/repairsServices/edit/<%= repServ.id %>" class="list-actions-button-edit">Edytuj</a>
+                    </li>
+                    <li>
+                        <a href="/repairsServices/delete/<%= repServ.id %>" class="list-actions-button-delete">Usuń</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <p><a href="/repairsServices/add" class="button-add">Dodaj usługę</a></p>
+    <% } %>
+
 </main>
 
 <%- include('../../fragments/footer.ejs')%>

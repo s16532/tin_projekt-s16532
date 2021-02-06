@@ -69,7 +69,7 @@
                 <td><%= v.location.street %></td>
                 <td><%= v.location.streetNum %></td>
                 <td><%= v.admissionDate.toISOString().split('T')[0] %></td>
-                <td><%= (v.releaseDate == null) ? v.status.name : v.releaseDate.toISOString().split('T')[0] %></td>
+                <td><%= (v.releaseDate == null) ? v.status.name : v.releaseDate %></td>
                 <td>
                 <% for (let rs of v.repair_services) { %>
                     <p><%= rs.service.name %></p>

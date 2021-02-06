@@ -14,6 +14,9 @@ exports.getRepairServices = () => {
             },{
                 model: Repair,
                 as: 'repair'
+            },{
+                model: Employee,
+                as: 'mechanic'
             }
         ]});
 };
@@ -27,6 +30,9 @@ exports.getRepairServiceById = (repairServiceId) => {
             }, {
                 model: Repair,
                 as: 'repair'
+            }, {
+                model: Employee,
+                as: 'mechanic'
             }]
         });
 };
