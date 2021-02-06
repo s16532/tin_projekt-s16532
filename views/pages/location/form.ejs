@@ -6,24 +6,47 @@
     <h2><%= pageTitle %></h2>
     <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
             <input type="hidden" name="id" value="<%= loc.id %>">
+
             <label for="name">Nazwa Warsztatu<abbr title="required" aria-label="required">*</abbr></label>
             <input type="text" name="name" id="name" placeholder="" value="<%= loc.name%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorLocationName" class="errors-text"></span>
+            <span id="errorName" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('name'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('name')).message %>
+                <% } %>
+            </span>
+
             <label for="city">Miasto<sup>*</sup></label>
             <input type="text" name="city" id="city" placeholder="" value="<%= loc.city%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorCity" class="errors-text"></span>
+            <span id="errorCity" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('city'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('city')).message %>
+                <% } %>
+            </span>
+
             <label for="street">Ulica<sup>*</sup></label>
             <input type="text" name="street" id="street" placeholder="" value="<%= loc.street%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorStreet" class="errors-text"></span>
+            <span id="errorStreet" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('street'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('street')).message %>
+                <% } %>
+            </span>
+
             <label for="streetNum">Numer Ulicy<sup>*</sup></label>
             <input type="text" name="streetNum" id="streetNum" placeholder="" value="<%= loc.streetNum%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorStreetNum" class="errors-text"></span>
+            <span id="errorStreetNum" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('streetNum'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('streetNum')).message %>
+                <% } %>
+            </span>
+
             <label for="postCode">Kod Pocztowy<sup>*</sup></label>
             <input type="text" name="postCode" id="postCode" placeholder="" value="<%= loc.postCode%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorPostCode" class="errors-text"></span>
-            <label for="country">Kraj<sup>*</sup></label>
-            <input type="text" name="country" id="country" placeholder="" value="<%= loc.country%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorPost" class="errors-text"></span>
+            <span id="errorPostCode" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('postCode'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('postCode')).message %>
+                <% } %>
+            </span>
+
         <% if (formMode == 'showDetails') { %>
             <div class="section-buttons">
                 <a href="/locations/edit/<%= loc.id %>" class="list-actions-button-edit ">Edytuj</a>

@@ -34,7 +34,6 @@ exports.createLocation = (data) => {
         street: data.street,
         streetNum: data.streetNum,
         postCode: data.postCode,
-        country: data.country,
     });
 };
 

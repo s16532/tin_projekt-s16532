@@ -17,30 +17,30 @@ function validateForm(){
         valid = false;
         unameInput.classList.add("error-input");
         errorUname.innerText = "Pole jest wymagane";
-    } else if (!checkTextLengthRange(unameInput.value, 2, 32)) {
+    } else if (!checkTextLengthRange(unameInput.value, 2, 60)) {
         valid = false;
         unameInput.classList.add("error-input");
-        errorUname.innerText = "Pole powinno zawierać od 2 do 32 znaków"
+        errorUname.innerText = "Pole powinno zawierać od 2 do 60 znaków"
     }
 
     if(!checkRequired(lastNameInput.value)) {
         valid = false;
         lastNameInput.classList.add("error-input");
         errorLastName.innerText = "Pole jest wymagane";
-    } else if (!checkTextLengthRange(firstNameInput.value, 2, 32)) {
+    } else if (!checkTextLengthRange(firstNameInput.value, 2, 60)) {
         valid = false;
         lastNameInput.classList.add("error-input");
-        errorLastName.innerText = "Pole powinno zawierać od 2 do 32 znaków"
+        errorLastName.innerText = "Pole powinno zawierać od 2 do 60 znaków"
     }
 
     if(!checkRequired(firstNameInput.value)) {
         valid = false;
         firstNameInput.classList.add("error-input");
         errorFirstName.innerText = "Pole jest wymagane";
-    } else if (!checkTextLengthRange(firstNameInput.value, 2, 32)) {
+    } else if (!checkTextLengthRange(firstNameInput.value, 2, 60)) {
         valid = false;
         firstNameInput.classList.add("error-input");
-        errorFirstName.innerText = "Pole powinno zawierać od 2 do 32 znaków"
+        errorFirstName.innerText = "Pole powinno zawierać od 2 do 60 znaków"
     }
 
 

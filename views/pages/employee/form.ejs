@@ -17,11 +17,19 @@
 
         <label for="lastName">Nazwisko<sup>*</sup></label>
         <input type="text" name="lastName" id="lastName" placeholder="" value="<%= emp.lastName%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-        <span id="errorLastName" class="errors-text"></span>
+        <span id="errorLastName" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('lastName'))) { %>
+                <%= validationErrors.find(e => e.path.includes('lastName')).message %>
+            <% } %>
+        </span>
 
         <label for="firstName">Imie<sup>*</sup></label>
         <input type="text" name="firstName" id="firstName" placeholder="" value="<%= emp.firstName%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-        <span id="errorFirstName" class="errors-text"></span>
+        <span id="errorFirstName" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('firstName'))) { %>
+                <%= validationErrors.find(e => e.path.includes('firstName')).message %>
+            <% } %>
+        </span>
 
         <% if (formMode == 'showDetails') { %>
             <div class="section-buttons">

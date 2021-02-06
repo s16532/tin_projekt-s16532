@@ -17,7 +17,8 @@ exports.showAddLocationForm = (req, res, next) => {
         pageTitle: 'Nowy warsztat',
         btnLabel: 'Dodaj warsztat',
         formAction: '/locations/add',
-        navLocation: 'loc'
+        navLocation: 'loc',
+        validationErrors: []
     });
 }
 
@@ -31,7 +32,8 @@ exports.showEditLocationForm = (req, res, next) => {
                 pageTitle: 'Edycja warsztatu',
                 btnLabel: 'Edytuj warsztat',
                 formAction: '/locations/edit',
-                navLocation: 'loc'
+                navLocation: 'loc',
+                validationErrors: [],
             })
         });
 }
@@ -45,7 +47,7 @@ exports.showLocationDetails = (req, res, next) => {
                 formMode: 'showDetails',
                 pageTitle: 'Szczegóły warsztatu',
                 formAction: '',
-                navLocation: 'loc'
+                navLocation: 'loc',
             })
         });
 }

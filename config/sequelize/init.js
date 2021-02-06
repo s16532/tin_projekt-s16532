@@ -137,7 +137,6 @@ module.exports = () => {
               street: 'Aleje Jerozolimskie',
               streetNum: '147',
               postCode: '02-326',
-              country: 'Polska'
             },
             {
               name: 'Poznań-Krzesiny',
@@ -145,7 +144,6 @@ module.exports = () => {
               street: 'Ożarowska',
               streetNum: '42',
               postCode: '61-332',
-              country: 'Polska'
             },
           ])
               .then(() => {
