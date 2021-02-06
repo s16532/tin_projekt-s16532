@@ -17,7 +17,8 @@ exports.showAddEmployeeForm = (req, res, next) => {
         pageTitle: 'Nowy pracownik',
         btnLabel: 'Dodaj pracownika',
         formAction: '/employees/add',
-        navLocation: 'emp'
+        navLocation: 'emp',
+        validationErrors: []
     });
 }
 
@@ -31,7 +32,8 @@ exports.showEditEmployeeForm = (req, res, next) => {
                 pageTitle: 'Edycja pracownika',
                 btnLabel: 'Edytuj pracownika',
                 formAction: '/employees/edit',
-                navLocation: 'emp'
+                navLocation: 'emp',
+                validationErrors: []
             })
         });
 }

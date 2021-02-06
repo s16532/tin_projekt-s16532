@@ -9,7 +9,11 @@
         <input type="hidden" name="id" value="<%= emp.id %>">
         <label for="uname">Nazwa użytkownika<abbr title="required" aria-label="required">*</abbr></label>
         <input type="text" name="uname" id="uname" placeholder="" value="<%= emp.uname%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-        <span id="errorUname" class="errors-text"></span>
+        <span id="errorUname" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('uname'))) { %>
+                <%= validationErrors.find(e => e.path.includes('uname')).message %>
+            <% } %>
+        </span>
 
         <label for="lastName">Nazwisko<sup>*</sup></label>
         <input type="text" name="lastName" id="lastName" placeholder="" value="<%= emp.lastName%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />

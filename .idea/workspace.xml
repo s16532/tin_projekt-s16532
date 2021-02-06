@@ -27,15 +27,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/serviceController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/serviceRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/joi/Employee.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/srviceController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Service.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/service/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/service/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/emploeeController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/emploeeController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Employee.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Employee.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/employee/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/employee/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,8 @@
       <workItem from="1611930458695" duration="12234000" />
       <workItem from="1612458540083" duration="20610000" />
       <workItem from="1612544450412" duration="20832000" />
-      <workItem from="1612607888577" duration="3013000" />
+      <workItem from="1612607888577" duration="4918000" />
+      <workItem from="1612645264928" duration="1598000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -335,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612562947452</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="added services pages">
+      <created>1612620076579</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612620076579</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,7 +383,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Wygląd widoków w CSS 1.2" />
     <MESSAGE value="Wygląd widoków w CSS 2 WIP" />
     <MESSAGE value="Wygląd widoków w CSS 2_2 WIP" />
     <MESSAGE value="poprawiono literówke i zmieniono ścieżki na bezwzględne" />
@@ -402,7 +407,8 @@
     <MESSAGE value="fixed db issues" />
     <MESSAGE value="added templates to location" />
     <MESSAGE value="added templates to employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="added templates to employee" />
+    <MESSAGE value="added services pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="added services pages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612402225115">
@@ -417,10 +423,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611711432434" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1612562944860">
+    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1612620074355">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612562944860" />
+    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612620074355" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1611714633898">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -453,10 +459,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612568594637" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612562954478">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612620079713">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612562954478" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612620079713" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612385813056">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
