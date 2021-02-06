@@ -10,6 +10,7 @@ const employeeRouter = require('./routes/employeeRoute');
 const repairRouter = require('./routes/repairRoute');
 const repairServiceRouter = require('./routes/repairServiceRoute');
 const vehicleRouter = require('./routes/vehicleRoute');
+const serviceRouter = require('./routes/serviceRoute');
 
 
 var app = express();
@@ -30,6 +31,7 @@ app.use('/employees', employeeRouter);
 app.use('/repairs', repairRouter);
 app.use('/repairsServices', repairServiceRouter);
 app.use('/vehicles', vehicleRouter);
+app.use('/services', serviceRouter);
 
 
 // catch 404 and forward to error handler

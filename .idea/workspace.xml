@@ -27,15 +27,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controllers/serviceController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/serviceRoute.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/repairController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/repairController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Repair.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Repair.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/RepairService.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/RepairService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/sequelize/RepairServiceRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/RepairServiceRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/repairRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/repairRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/vehicle/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/vehicle/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/srviceController.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Service.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/service/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/service/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +70,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -78,19 +78,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicles" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model\sequelize" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\pages" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\service" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\routes" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
     </key>
   </component>
   <component name="RunManager">
@@ -130,6 +130,7 @@
       <workItem from="1611930458695" duration="12234000" />
       <workItem from="1612458540083" duration="20610000" />
       <workItem from="1612544450412" duration="20832000" />
+      <workItem from="1612607888577" duration="3013000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -464,10 +465,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="0" y="73" width="2213" height="1314" key="dock-window-1/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611713011094" />
-    <state x="1640" y="344" width="628" height="801" key="find.popup" timestamp="1612568037083">
+    <state x="1640" y="344" width="628" height="801" key="find.popup" timestamp="1612617827353">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="1640" y="344" width="628" height="801" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612568037083" />
+    <state x="1640" y="344" width="628" height="801" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612617827353" />
     <state x="1048" y="413" key="git4idea.branch.GitSmartOperationDialog" timestamp="1611714295189">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

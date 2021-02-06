@@ -8,44 +8,33 @@
             <tr>
                 <th>Nazwa usługi</th>
                 <th>Cena (PLN)</th>
-                <th>Aktywna</th>
                 <th>Akcje</th>
             </tr>
         </thead>
         <tbody>
+        <% for (let serv of servs) { %>
             <tr>
-                <td>Wymiana Opon</td>
-                <td>100</td>
-                <td>tak</td>
+                <td><%= serv.name %></td>
+                <td><%= serv.price %></td>
                 <td>
                     <ul class="list-actions">
                         <li>
-                            <a href="/services/add" class="list-actions-button-edit">Edytuj</a>
+                            <a href="/services/details/<%= serv.id %>" class="list-actions-button-details">Szczegóły</a>
                         </li>
                         <li>
-                            <a href="" class="list-actions-button-delete">Deaktywuj</a>
+                            <a href="/services/edit/<%= serv.id %>" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="/services/delete/<%= serv.id %>" class="list-actions-button-delete">Usuń</a>
                         </li>
                     </ul>
                 </td>
             </tr>
-            <tr>
-                <td>Wymiana Oleju (własny olej)</td>
-                <td>70</td>
-                <td>tak</td>
-                <td>
-                    <ul class="list-actions">
-                        <li>
-                            <a href="" class="list-actions-button-edit">Edytuj</a>
-                        </li>
-                        <li>
-                            <a href="" class="list-actions-button-delete">Deaktywuj</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
+        <% } %>
+
         </tbody>
     </table>
-    <p><a href="/employees/add" class="button-add">Dodaj nową usługę</a> </p>
+    <p><a href="/services/add" class="button-add">Dodaj nową usługę</a> </p>
 
 </main>
 

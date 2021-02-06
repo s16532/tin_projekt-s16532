@@ -17,10 +17,6 @@ const Service = sequelize.define('Service', {
         type: Sequelize.INTEGER,
         allowNull: false,
     },
-    active:{
-        type: Sequelize.BOOLEAN,
-        allowNull: false,
-    },
 });
 
 module.exports = Service;
