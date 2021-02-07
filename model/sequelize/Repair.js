@@ -11,26 +11,59 @@ const Repair = sequelize.define('Repair', {
     status_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+        },
     },
     location_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+        },
     },
     vehicle_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+        },
     },
     admissionDate:{
         type: Sequelize.DATEONLY,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            isDate: {
+                msg: "Pole powinno zawierać datę"
+            },
+        },
     },
     admissionEmp:{
         type: Sequelize.INTEGER,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+        },
     },
     releaseDate:{
         type: Sequelize.DATEONLY,
         allowNull: true,
+        validate: {
+            isDate: {
+                msg: "Pole powinno zawierać datę"
+            },
+        },
     },
     releaseEmp:{
         type: Sequelize.INTEGER,

@@ -13,46 +13,65 @@
         <input type="text" name="id" id="id" value="<%= (formMode == 'createNew') ? 'Nowa naprawa' : rep.id %>" disabled="true"/>
         <span></span>
 
-        <label for="status">Status<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="status_id" id="status" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
+        <label for="status_id">Status<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="status_id" id="status_id" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz status ---</option>
             <% for (let i=0; i < allStatuses.length; i++) { let stat = allStatuses[i]; %>
             <option value="<%= stat.id %>" label="<%= stat.name%>"
             <%= (rep.id && stat.id.toString() == rep.status.id.toString()) ? 'selected' : ''%>></option>
             <% } %>
         </select>
-        <span id="errorStatus" class="errors-text"></span>
+        <span id="errorStatus" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('status_id'))) { %>
+                <%= validationErrors.find(e => e.path.includes('status_id')).message %>
+            <% } %>
+        </span>
 
-        <label for="location">Warsztat<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="location_id" id="location" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
+        <label for="location_id">Warsztat<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="location_id" id="location_id" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz warsztat ---</option>
             <% for (let i=0; i < allLocations.length; i++) { let loc = allLocations[i]; %>
             <option value="<%= loc.id %>" label="<%= loc.name%>"
                     <%= (rep.id && loc.name == rep.location.name) ? 'selected' : ''%>></option>
             <% } %>
         </select>
-        <span id="errorLocation" class="errors-text"></span>
+        <span id="errorLocation" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('location_id'))) { %>
+                <%= validationErrors.find(e => e.path.includes('location_id')).message %>
+            <% } %>
+        </span>
 
-        <label for="vehicle">Pojazd<sup>*</sup></label>
-        <select name="vehicle_id" id="vehicle" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
+        <label for="vehicle_id">Pojazd<sup>*</sup></label>
+        <select name="vehicle_id" id="vehicle_id" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz pojazd ---</option>
             <% for (let i=0; i < allVehicles.length; i++) { let veh = allVehicles[i]; %>
             <option value="<%= veh.id %>" label="<%= veh.VIN%>"
                     <%= (rep.id && veh.VIN == rep.vehicle.VIN) ? 'selected' : ''%>></option>
             <% } %>
         </select>
-        <span id="errorVehicle" class="errors-text"></span>
+        <span id="errorVehicle" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('vehicle_id'))) { %>
+                <%= validationErrors.find(e => e.path.includes('vehicle_id')).message %>
+            <% } %>
+        </span>
 
         <% if(formMode == 'createNew') { %>
             <label for="admissionDate">Data przyjęcia<sup>*</sup></label>
-            <input type="text" name="admissionDate"  id="admissionDate" placeholder=""  value="<%= rep.admissionDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorAdmissionDate" class="errors-text"></span>
+            <input type="text" name="admissionDate"  id="admissionDate" placeholder="yyyy-mm-dd"  value="<%= rep.admissionDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <span id="errorAdmissionDate" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('admissionDate'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('admissionDate')).message %>
+                <% } %>
+            </span>
         <% } else { %>
             <label for="admissionDate">Data przyjęcia<sup>*</sup></label>
-            <input type="text" name="admissionDate"  id="admissionDate" placeholder=""  value="<%= rep.admissionDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorAdmissionDate" class="errors-text"></span>
+            <input type="text" name="admissionDate"  id="admissionDate" placeholder="yyyy-mm-dd"  value="<%= rep.admissionDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <span id="errorAdmissionDate" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('admissionDate'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('admissionDate')).message %>
+                <% } %>
+            </span>
         <% } %>
-
 
         <label for="admissionEmp">Pracownik Przyjmujący<sup>*</sup></label>
         <select name="admissionEmp" id="admissionEmp" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
@@ -62,30 +81,46 @@
                     <%= (rep.id && aEmp.id == rep.admissionEmp) ? 'selected' : ''%>></option>
             <% } %>
         </select>
-        <span id="errorAdmissionEmp" class="errors-text"></span>
+        <span id="errorAdmissionEmp" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('admissionEmp'))) { %>
+                <%= validationErrors.find(e => e.path.includes('admissionEmp')).message %>
+            <% } %>
+        </span>
 
         <% if(formMode == 'createNew') { %>
             <label for="releaseDate">Data zakończenia</label>
-            <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= (rep.releaseDate == '') ? 'NULL' : rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorReleaseDate" class="errors-text"></span>
+            <input type="text" name="releaseDate" id="releaseDate" placeholder="yyyy-mm-dd"  value="<%= (rep.releaseDate == '') ? 'NULL' : rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+            <span id="errorReleaseDate" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('releaseDate'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('releaseDate')).message %>
+                <% } %>
+            </span>
         <% } %>
         <% if(formMode == 'edit') { %>
             <label for="releaseDate">Data zakończenia</label>
             <% if(rep.releaseDate != null) { %>
-                <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+                <input type="text" name="releaseDate" id="releaseDate" placeholder="yyyy-mm-dd"  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <% } else { %>
-                <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+                <input type="text" name="releaseDate" id="releaseDate" placeholder="yyyy-mm-dd"  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
             <% } %>
-            <span id="errorReleaseDate" class="errors-text"></span>
+            <span id="errorReleaseDate" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('releaseDate'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('releaseDate')).message %>
+                <% } %>
+            </span>
         <% } %>
         <% if(formMode == 'showDetails') { %>
             <label for="releaseDate">Data zakończenia</label>
             <input type="text" name="releaseDate" id="releaseDate" placeholder=""  value="<%= rep.releaseDate %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
-            <span id="errorReleaseDate" class="errors-text"></span>
+            <span id="errorReleaseDate" class="errors-text">
+                <% if (validationErrors.find(e => e.path.includes('releaseDate'))) { %>
+                    <%= validationErrors.find(e => e.path.includes('releaseDate')).message %>
+                <% } %>
+            </span>
         <% } %>
 
-        <label for="releaseEmp_id">Pracownik Wydający</label>
-        <select name="releaseEmp" id="releaseEmp_id" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
+        <label for="releaseEmp">Pracownik Wydający</label>
+        <select name="releaseEmp" id="releaseEmp" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz pracownika ---</option>
             <% if (rep.releaseEmp !== null || formMode == 'edit' ) {%>
             <% for (let i=0; i < allRelEmps.length; i++) { let rEmp = allRelEmps[i]; %>
@@ -94,7 +129,12 @@
             <% } %>
             <% } %>
         </select>
-        <span id="errorReleaseEmp" class="errors-text"></span>
+        <span id="errorReleaseEmp" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('releaseEmp'))) { %>
+                <%= validationErrors.find(e => e.path.includes('releaseEmp')).message %>
+            <% } %>
+        </span>
+
         <% if (formMode == 'showDetails') { %>
             <div class="section-buttons">
                 <a href="/repairs/edit/<%= rep.id %>" class="list-actions-button-edit ">Edytuj</a>
@@ -134,7 +174,7 @@
             <td>
                 <ul class="list-actions">
                     <li>
-                        <a href="/services/details/<%= repServ.service.id %>" class="list-actions-button-details">Szczegóły</a>
+                        <a href="/repairsServices/details/<%= repServ.service.id %>" class="list-actions-button-details">Szczegóły</a>
                     </li>
                     <li>
                         <a href="/repairsServices/edit/<%= repServ.id %>" class="list-actions-button-edit">Edytuj</a>
@@ -148,7 +188,7 @@
         <% } %>
         </tbody>
     </table>
-    <p><a href="/repairsServices/add" class="button-add">Dodaj usługę</a></p>
+    <p><a href="/repairsServices/add/<%= rep.id %>" class="button-add">Dodaj usługę</a></p>
     <% } %>
 
 </main>

@@ -1,8 +1,8 @@
 function validateForm(){
 
-    const   statusInput = document.getElementById('status');
-    const   locationInput = document.getElementById('location');
-    const   vehicleInput = document.getElementById('vehicle');
+    const   statusInput = document.getElementById('status_id');
+    const   locationInput = document.getElementById('location_id');
+    const   vehicleInput = document.getElementById('vehicle_id');
     const   admissionDateInput = document.getElementById('admissionDate');
     const   admissionEmpInput = document.getElementById('admissionEmp');
     const   releaseDateInput = document.getElementById('releaseDate');

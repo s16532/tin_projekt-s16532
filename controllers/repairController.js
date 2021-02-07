@@ -46,7 +46,8 @@ exports.showAddRepairForm = (req, res, next) => {
                 pageTitle: 'Nowa naprawa',
                 btnLabel: 'Dodaj naprawę',
                 formAction: '/repairs/add',
-                navLocation: 'rep'
+                navLocation: 'rep',
+                validationErrors: []
             });
         })
 }
@@ -84,7 +85,8 @@ exports.showEditRepairForm = (req, res, next) => {
                 pageTitle: 'Edycja naprawy',
                 btnLabel: 'Edytuj naprawę',
                 formAction: '/repairs/edit',
-                navLocation: 'rep'
+                navLocation: 'rep',
+                validationErrors: []
             });
         })
 
@@ -127,7 +129,8 @@ exports.showRepairDetails = (req, res, next) => {
                 allRepServs: allRepServs,
                 pageTitle: 'Szczegóły naprawy',
                 formAction: '',
-                navLocation: 'rep'
+                navLocation: 'rep',
+                validationErrors: []
             });
         })
 }

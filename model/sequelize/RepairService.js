@@ -15,14 +15,32 @@ const RepairService = sequelize.define('RepairService', {
     service_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+        },
     },
     date:{
         type: Sequelize.DATEONLY,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            isDate: {
+                msg: "Pole powinno zawierać datę"
+            },
+        },
     },
     employee_id:{
         type: Sequelize.INTEGER,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+        },
     },
 });
 

@@ -1,37 +1,68 @@
 <%- include('../../fragments/header.ejs')%>
 
 <script type="application/javascript" src="/js/validationCommon.js"></script>
-<script type="application/javascript" src="/js/validationServiceForm.js"></script>
+<script type="application/javascript" src="/js/validationRepairServiceForm.js"></script>
 
 <main>
-    <h2>Nowa Usługa</h2>
-    <form class="form" novalidate onsubmit="return validateForm();">
-        <label for="service">Usługa<abbr title="required" aria-label="required">*</abbr></label>
-        <select name="service" id="service" >
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+
+        <input type="hidden" name="id" value="<%= repServ.id %>">
+
+        <input type="hidden" name="repair_id" value="<%= repId %>">
+
+        <label for="service_id">Usługa<abbr title="required" aria-label="required">*</abbr></label>
+        <select name="service_id" id="service_id" <%= (formMode == 'showDetails') ? 'disabled' : '' %>>
             <option value="">--- Wybierz usługę ---</option>
-            <option value="1">Wymiana opon</option>
-            <option value="2">Wymiana akumulatora (usługa)</option>
-            <option value="3">Wymiana oleju</option>
+            <% for (let i=0; i < allServices.length; i++) { let serv = allServices[i]; %>
+            <option value="<%= serv.id %>" label="<%= serv.name%>"
+                    <%= (repServ.id && serv.id.toString() == repServ.service.id.toString()) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
-        <span id="errorService" class="errors-text"></span>
+        <span id="errorService" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('service_id'))) { %>
+                <%= validationErrors.find(e => e.path.includes('service_id')).message %>
+            <% } %>
+        </span>
 
         <label for="date">Data<abbr title="required" aria-label="required">*</abbr></label>
-        <input type="text" name="date" value="yyyy-mm-dd" id="date" />
-        <span id="errorDate" class="errors-text"></span>
+        <input type="text" name="date" id="date" placeholder="yyyy-mm-dd" value="<%= repServ.date %>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorDate" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('date'))) { %>
+                <%= validationErrors.find(e => e.path.includes('date')).message %>
+            <% } %>
+        </span>
 
-        <label for="mechanic">Mechanik<sup>*</sup></label>
-        <select name="mechanic" id="mechanic" >
+        <label for="employee_id">Mechanik<sup>*</sup></label>
+        <select name="employee_id" id="employee_id" <%= (formMode == 'showDetails') ? 'disabled' : '' %> >
             <option value="">--- Wybierz mechanika ---</option>
-            <option value="1">Adam Nowak</option>
-            <option value="2">Marian Kowalski</option>
+            <% for (let i=0; i < allEmps.length; i++) { let emp = allEmps[i]; %>
+            <option value="<%= emp.id %>" label="<%= emp.firstName + ' ' + emp.lastName%>"
+                    <%= (repServ.id && emp.id.toString() == repServ.mechanic.id.toString()) ? 'selected' : ''%>></option>
+            <% } %>
         </select>
-        <span id="errorMechanic" class="errors-text"></span>
+        <span id="errorMechanic" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('employee_id'))) { %>
+                <%= validationErrors.find(e => e.path.includes('employee_id')).message %>
+            <% } %>
+        </span>
+
+        <% if (formMode == 'showDetails') { %>
+            <div class="section-buttons">
+                <a href="/repairsServices/edit/<%= repServ.id %>" class="list-actions-button-edit ">Edytuj</a>
+            </div>
+        <% } %>
 
         <div class="form-buttons">
             <p id="errorsSummary" class="errors-text"></p>
-            <input type="submit" class="form-button-submit" value="Dodaj">
-            <a href="/repairs/details/1" class="form-button-cancel">Anuluj</a>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/repairs/details/<%= repId%>">Anuluj</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/repairs/details/<%= repId%>">Powrót</a>
+            <% } %>
         </div>
+
     </form>
 </main>
 
