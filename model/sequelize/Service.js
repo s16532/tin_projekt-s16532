@@ -12,10 +12,28 @@ const Service = sequelize.define('Service', {
         type: Sequelize.STRING,
         allowNull: false,
         unique: true,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+            len: {
+                args: [2,60],
+                msg: "Pole powinno zawierać od 2 do 60 znaków"
+            },
+        },
     },
     price:{
         type: Sequelize.INTEGER,
         allowNull: false,
+        validate: {
+            notEmpty: {
+                msg: "Pole jest wymagane"
+            },
+
+            isInt: {
+                msg: "Pole powinno zawierać liczbę"
+            },
+        },
     },
 });
 

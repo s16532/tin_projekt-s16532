@@ -27,15 +27,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/js/validationServiceForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/repairController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/repairController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/repairServiceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/repairServiceController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/sequelize/Repair.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Repair.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationRepairForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationRepairForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/validationServiceForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationRepairServiceForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/repairServiceRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/repairServiceRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repair/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repair/form.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/repairService/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/repairService/form.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/sequelize/Service.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/sequelize/Service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/validationCommon.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/validationCommon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/repository/sequelize/ServiceRepository.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/service/form.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/form.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +67,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/routes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -78,19 +75,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\routes" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model\sequelize" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\pages" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\service" />
       <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\routes" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
     </key>
   </component>
   <component name="RunManager">
@@ -131,7 +128,7 @@
       <workItem from="1612458540083" duration="20610000" />
       <workItem from="1612544450412" duration="20832000" />
       <workItem from="1612607888577" duration="4918000" />
-      <workItem from="1612645264928" duration="15094000" />
+      <workItem from="1612645264928" duration="16845000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -357,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612650230758</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="added server validation and fixed client validation for repairService">
+      <created>1612664858307</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1612664858307</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +403,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="poprawiono literówke i zmieniono ścieżki na bezwzględne" />
     <MESSAGE value="poprawiono błędy ścieżek" />
     <MESSAGE value="update readme.md" />
     <MESSAGE value="bugs fixes" />
@@ -424,7 +427,8 @@
     <MESSAGE value="added services pages" />
     <MESSAGE value="added server validation and fixed client validation for employee" />
     <MESSAGE value="added server validation and fixed client validation for location" />
-    <option name="LAST_COMMIT_MESSAGE" value="added server validation and fixed client validation for location" />
+    <MESSAGE value="added server validation and fixed client validation for repairService" />
+    <option name="LAST_COMMIT_MESSAGE" value="added server validation and fixed client validation for repairService" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1612402225115">
@@ -439,10 +443,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1611711432434" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1612650228684">
+    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1612664856045">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612650228684" />
+    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612664856045" />
     <state x="92" y="92" width="2376" height="1216" key="DiffContextDialog" timestamp="1611714633898">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
@@ -475,10 +479,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612568594637" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612650233248">
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1612664860173">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612650233248" />
+    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1612664860173" />
     <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1612385813056">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

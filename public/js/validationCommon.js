@@ -56,6 +56,15 @@ function checkPostCode(value){
     return re.test(value);
 }
 
+function checkIfNumber(value){
+    if(!value){
+        return false
+    }
+    value = value.toString().trim();
+    const re = /\d/g;
+    return re.test(value);
+}
+
 function checkProcudcionDate(value){
     if(!value){
         return false

@@ -24,7 +24,6 @@ exports.createService = (data) => {
     return Service.create({
         name: data.name,
         price: data.price,
-        active: data.action,
     });
 };
 
