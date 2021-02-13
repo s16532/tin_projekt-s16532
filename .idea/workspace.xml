@@ -26,14 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="added password encryption">
+    <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="added functions limiting for logged users">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/locationRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/locationRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/util/authUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/authUtils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/location/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/list.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/pages/service/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +126,7 @@
       <workItem from="1612544450412" duration="20832000" />
       <workItem from="1612607888577" duration="4918000" />
       <workItem from="1612645264928" duration="16845000" />
-      <workItem from="1613150126282" duration="9729000" />
+      <workItem from="1613150126282" duration="10894000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -378,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613181219674</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="added functions limiting for logged users">
+      <created>1613182310284</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1613182310284</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -420,7 +422,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="bugs fixes" />
     <MESSAGE value="added vehicle-list.html" />
     <MESSAGE value="added vehicle-form.html" />
     <MESSAGE value="added validationVehicleForm.js" />
@@ -445,6 +446,7 @@
     <MESSAGE value="added server validation and fixed client validation for repairService" />
     <MESSAGE value="added login" />
     <MESSAGE value="added password encryption" />
-    <option name="LAST_COMMIT_MESSAGE" value="added password encryption" />
+    <MESSAGE value="added functions limiting for logged users" />
+    <option name="LAST_COMMIT_MESSAGE" value="added functions limiting for logged users" />
   </component>
 </project>
