@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="">
+    <list default="true" id="e5d67af5-43c2-4cf2-9b73-68a539331556" name="Default Changelist" comment="added password encryption">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/location-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location-details.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/location-form.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location-form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pages/location-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pages/location-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/locationRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/locationRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/authUtils.js" beforeDir="false" afterPath="$PROJECT_DIR$/util/authUtils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments/header.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/location/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/location/list.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/pages/service/list.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/views/pages/service/list.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +45,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -39,19 +67,29 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\js" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\routes" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\repair" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\employer" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\pages\vehicle" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\public\stylesheets" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\docs" />
-      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\css" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model\sequelize" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\model" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\pages" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views\service" />
+      <recent name="C:\Users\MateuszJacoszek\WebstormProjects\tin-projekt-s16532\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -72,7 +110,28 @@
       <updated>1607964449495</updated>
       <workItem from="1607964450592" duration="16883000" />
       <workItem from="1608038651474" duration="1376000" />
-      <workItem from="1608055882611" duration="8206000" />
+      <workItem from="1608055882611" duration="15804000" />
+      <workItem from="1608397376017" duration="599000" />
+      <workItem from="1608556184582" duration="4841000" />
+      <workItem from="1608581354764" duration="3948000" />
+      <workItem from="1608635520426" duration="11175000" />
+      <workItem from="1608661639921" duration="597000" />
+      <workItem from="1608672874024" duration="600000" />
+      <workItem from="1610919385453" duration="3480000" />
+      <workItem from="1610981086099" duration="24654000" />
+      <workItem from="1611169527543" duration="597000" />
+      <workItem from="1611253173735" duration="542000" />
+      <workItem from="1611430263873" duration="15763000" />
+      <workItem from="1611691903547" duration="10197000" />
+      <workItem from="1611770303644" duration="2727000" />
+      <workItem from="1611789258267" duration="592000" />
+      <workItem from="1611861846346" duration="8876000" />
+      <workItem from="1611930458695" duration="12234000" />
+      <workItem from="1612458540083" duration="20610000" />
+      <workItem from="1612544450412" duration="20832000" />
+      <workItem from="1612607888577" duration="4918000" />
+      <workItem from="1612645264928" duration="16845000" />
+      <workItem from="1613150126282" duration="9729000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit, Statyczny wygląd aplikacji">
       <created>1607972078004</created>
@@ -95,74 +154,297 @@
       <option name="project" value="LOCAL" />
       <updated>1607998898875</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Wygląd widoków w CSS 1.2">
+      <created>1608064614784</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608064614784</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Wygląd widoków w CSS 2 WIP">
+      <created>1608086093519</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608086093519</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Wygląd widoków w CSS 2_2 WIP">
+      <created>1608087509883</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608087509883</updated>
+    </task>
+    <task id="LOCAL-00007" summary="poprawiono literówke i zmieniono ścieżki na bezwzględne">
+      <created>1608565682494</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1608565682494</updated>
+    </task>
+    <task id="LOCAL-00008" summary="poprawiono błędy ścieżek">
+      <created>1608566125231</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608566125231</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update readme.md">
+      <created>1608566353468</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1608566353468</updated>
+    </task>
+    <task id="LOCAL-00010" summary="bugs fixes">
+      <created>1610934265746</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1610934265746</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added vehicle-list.html">
+      <created>1611000252911</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611000252911</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added vehicle-form.html">
+      <created>1611003381747</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1611003381747</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added validationVehicleForm.js">
+      <created>1611016063661</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1611016063661</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added vehicle-details.html">
+      <created>1611019499217</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1611019499217</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added repair-list.html">
+      <created>1611020888137</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1611020888137</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added validationRepairForm.js">
+      <created>1611439766461</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611439766461</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added validationRepairForm.js">
+      <created>1611440621632</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611440621632</updated>
+    </task>
+    <task id="LOCAL-00018" summary="added employer-list.html">
+      <created>1611442429935</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1611442429935</updated>
+    </task>
+    <task id="LOCAL-00019" summary="added employer-form.html and validationEmployerForm.js">
+      <created>1611448500037</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1611448500037</updated>
+    </task>
+    <task id="LOCAL-00020" summary="added repair-details.html">
+      <created>1611452096671</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1611452096671</updated>
+    </task>
+    <task id="LOCAL-00021" summary="added service-form.html">
+      <created>1611453017628</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1611453017628</updated>
+    </task>
+    <task id="LOCAL-00022" summary="moved htmls to ejs-es">
+      <created>1611697084093</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611697084093</updated>
+    </task>
+    <task id="LOCAL-00023" summary="added routers and controllers for all groups">
+      <created>1611871350906</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1611871350906</updated>
+    </task>
+    <task id="LOCAL-00024" summary="restored validation">
+      <created>1611957447657</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1611957447657</updated>
+    </task>
+    <task id="LOCAL-00025" summary="merge">
+      <created>1612385833726</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1612385833726</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added all repositories">
+      <created>1612482477421</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612482477421</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fixed db issues">
+      <created>1612485595014</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1612485595014</updated>
+    </task>
+    <task id="LOCAL-00028" summary="added templates to location">
+      <created>1612497864365</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612497864365</updated>
+    </task>
+    <task id="LOCAL-00029" summary="added templates to employee">
+      <created>1612562947452</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612562947452</updated>
+    </task>
+    <task id="LOCAL-00030" summary="added services pages">
+      <created>1612620076579</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1612620076579</updated>
+    </task>
+    <task id="LOCAL-00031" summary="added server validation and fixed client validation for employee">
+      <created>1612647961454</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1612647961454</updated>
+    </task>
+    <task id="LOCAL-00032" summary="added server validation and fixed client validation for location">
+      <created>1612650230758</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1612650230758</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added server validation and fixed client validation for repairService">
+      <created>1612664858307</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1612664858307</updated>
+    </task>
+    <task id="LOCAL-00034" summary="added login">
+      <created>1613180002928</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1613180002928</updated>
+    </task>
+    <task id="LOCAL-00035" summary="added password encryption">
+      <created>1613181219674</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1613181219674</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit, Statyczny wygląd aplikacji" />
-    <MESSAGE value="added README.md" />
-    <MESSAGE value="Wygląd widoków w CSS 1 WIP" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wygląd widoków w CSS 1 WIP" />
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
-  <component name="WindowStateProjectService">
-    <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607964658921">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1374" y="358" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964658921" />
-    <state x="1031" y="502" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607968461732">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1031" y="502" key="#com.intellij.fileTypes.FileTypeChooser/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607968461732" />
-    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607988509703">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1010" y="447" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607988509703" />
-    <state x="882" y="268" key="CommitChangelistDialog2" timestamp="1607998896345">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="882" y="268" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607998896345" />
-    <state x="934" y="389" key="FileChooserDialogImpl" timestamp="1607988503994">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="934" y="389" key="FileChooserDialogImpl/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607988503994" />
-    <state width="1256" height="400" key="GridCell.Tab.0.bottom" timestamp="1607964596721">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1256" height="400" key="GridCell.Tab.0.bottom/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state width="1256" height="400" key="GridCell.Tab.0.center" timestamp="1607964596721">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1256" height="400" key="GridCell.Tab.0.center/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state width="1256" height="400" key="GridCell.Tab.0.left" timestamp="1607964596721">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1256" height="400" key="GridCell.Tab.0.left/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state width="1256" height="400" key="GridCell.Tab.0.right" timestamp="1607964596721">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state width="1256" height="400" key="GridCell.Tab.0.right/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607964596721" />
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2" timestamp="1607998901092">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="872" y="433" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607998901092" />
-    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607972535320">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1097" y="614" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607972535320" />
-    <state x="987" y="299" width="585" height="801" key="find.popup" timestamp="1607989376933">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="987" y="299" width="585" height="801" key="find.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607989376933" />
-    <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1607972182443">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="1081" y="606" key="git4idea.remote.GitConfigureRemotesDialog/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607972182443" />
-    <state x="943" y="315" key="search.everywhere.popup" timestamp="1607972616172">
-      <screen x="0" y="0" width="2560" height="1400" />
-    </state>
-    <state x="943" y="315" key="search.everywhere.popup/0.0.2560.1400/2560.0.1920.1040@0.0.2560.1400" timestamp="1607972616172" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bugs fixes" />
+    <MESSAGE value="added vehicle-list.html" />
+    <MESSAGE value="added vehicle-form.html" />
+    <MESSAGE value="added validationVehicleForm.js" />
+    <MESSAGE value="added vehicle-details.html" />
+    <MESSAGE value="added repair-list.html" />
+    <MESSAGE value="added validationRepairForm.js" />
+    <MESSAGE value="added employer-list.html" />
+    <MESSAGE value="added employer-form.html and validationEmployerForm.js" />
+    <MESSAGE value="added repair-details.html" />
+    <MESSAGE value="added service-form.html" />
+    <MESSAGE value="moved htmls to ejs-es" />
+    <MESSAGE value="added routers and controllers for all groups" />
+    <MESSAGE value="restored validation" />
+    <MESSAGE value="merge" />
+    <MESSAGE value="added all repositories" />
+    <MESSAGE value="fixed db issues" />
+    <MESSAGE value="added templates to location" />
+    <MESSAGE value="added templates to employee" />
+    <MESSAGE value="added services pages" />
+    <MESSAGE value="added server validation and fixed client validation for employee" />
+    <MESSAGE value="added server validation and fixed client validation for location" />
+    <MESSAGE value="added server validation and fixed client validation for repairService" />
+    <MESSAGE value="added login" />
+    <MESSAGE value="added password encryption" />
+    <option name="LAST_COMMIT_MESSAGE" value="added password encryption" />
   </component>
 </project>

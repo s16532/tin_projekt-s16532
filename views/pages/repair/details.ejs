@@ -1,0 +1,96 @@
+<%- include('../../fragments/header.ejs')%>
+<main>
+    <h2>Szczegóły Naprawy</h2>
+    <form class="form">
+        <label for="id">ID</label>
+        <input type="text" name="id" id="id" value="1" disabled="true"/>
+        <span></span>
+
+        <label for="status">Status</label>
+        <input type="text" name="status" id="status" value="Wydany" disabled="true"/>
+        <span></span>
+
+        <label for="location">Warsztat</label>
+        <input type="text" name="location" id="location" value="Warszawa-Jerozolimskie" disabled="true"/>
+        <span></span>
+
+        <label for="brand">Marka</label>
+        <input type="text" name="brand" id="brand" value="Opel" disabled="true"/>
+        <span></span>
+
+        <label for="model">Model</label>
+        <input type="text" name="model" id="model" value="Corsa" disabled="true"/>
+        <span></span>
+
+        <label for="VIN">VIN</label>
+        <input type="text" name="VIN" id="VIN" value="1NXBU4EE0AZ325696" disabled="true"/>
+        <span></span>
+
+        <label for="admissionDate">Data przyjęcia</label>
+        <input type="text" name="admissionDate" id="admissionDate" value="2020-12-1" disabled="true"/>
+        <span></span>
+
+        <label for="admissionEmp">Pracownik Przyjmujący</label>
+        <input type="text" name="admissionEmp" id="admissionEmp" value="Apolonia Marchewka" disabled="true"/>
+        <span></span>
+
+        <label for="releaseDate">Data zakończenia</label>
+        <input type="text" name="releaseDate" id="releaseDate" value="2020-12-5" disabled="true"/>
+        <span></span>
+
+        <label for="releaseEmp">Pracownik Wydający</label>
+        <input type="text" name="releaseEmp" id="releaseEmp" value="Adam Nowak" disabled="true"/>
+        <span></span>
+
+        <label for="cost">Koszt</label>
+        <input type="text" name="cost" id="cost" value="120 PLN" disabled="true"/>
+        <span></span>
+
+        <p><a href="/repairs/add" class="list-actions-button-edit ">Edytuj</a></p>
+    </form>
+
+    <h2>Usługi</h2>
+
+    <table class="table-list">
+        <thead>
+        <tr>
+            <th>Nazwa</th>
+            <th>Data</th>
+            <th>Pracownik</th>
+            <th>Cena</th>
+            <th>Akcje</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Wymiana Opon</td>
+            <td>2020-12-2</td>
+            <td>Adam Nowak</td>
+            <td>100 PLN</td>
+            <td>
+                <ul class="list-actions">
+                    <li>
+                        <a href="" class="list-actions-button-delete">Usuń</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>Wymiana Akumulatora (Własny)</td>
+            <td>2020-12-04</td>
+            <td>Adam Nowak</td>
+            <td>20 PLN</td>
+            <td>
+                <ul class="list-actions">
+                    <li>
+                        <a href="" class="list-actions-button-delete">Usuń</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <p><a href="/repairsServices/add" class="button-add">Dodaj usługę</a></p>
+</main>
+
+<%- include('../../fragments/footer.ejs')%>

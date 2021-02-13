@@ -1,0 +1,90 @@
+<%- include('../../fragments/header.ejs')%>
+
+<script type="application/javascript" src="/js/validationCommon.js"></script>
+<script type="application/javascript" src="/js/validationVehicleForm.js"></script>
+
+<main>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+        <input type="hidden" name="id" value="<%= veh.id %>">
+        <label for="VIN">VIN<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="VIN" id="VIN" placeholder="" value="<%= veh.VIN%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorVIN" class="errors-text"></span>
+        <label for="type">Typ pojazdu<sup>*</sup></label>
+        <input type="text" name="type" id="type" placeholder="" value="<%= veh.type%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorVehicleType" class="errors-text"></span>
+        <label for="brand">Marka<sup>*</sup></label>
+        <input type="text" name="brand" id="brand" placeholder="" value="<%= veh.brand%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorBrand" class="errors-text"></span>
+        <label for="model">Model<sup>*</sup></label>
+        <input type="text" name="model" id="model" placeholder="" value="<%= veh.model%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorModel" class="errors-text"></span>
+        <label for="productionYear">Rok produkcji<sup>*</sup></label>
+        <input type="text" name="productionYear" id="productionYear" placeholder="" value="<%= veh.productionYear%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorProductionYear" class="errors-text"></span>
+        <label for="engineType">Typ silnika<sup>*</sup></label>
+        <input type="text" name="engineType" id="engineType" placeholder="" value="<%= veh.engineType%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorEngineType" class="errors-text"></span>
+        <label for="engineSize">Pojemność silnika</label>
+        <input type="text" name="engineSize" id="engineSize" placeholder="" value="<%= veh.engineSize%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorEngineSize" class="errors-text"></span>
+        <% if (formMode == 'showDetails') { %>
+            <div class="section-buttons">
+                <a href="/vehicles/edit/<%= veh.id %>" class="list-actions-button-edit ">Edytuj</a>
+            </div>
+        <% } %>
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/vehicles">Anuluj</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/vehicles">Powrót</a>
+            <% } %>
+        </div>
+    </form>
+
+    <% if (formMode == 'showDetails' || formMode == 'edit') { %>
+        <h2>Naprawy</h2>
+        <table class="table-list">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Warsztat</th>
+                <th>Miasto</th>
+                <th>Ulica</th>
+                <th>Numer</th>
+                <th>Data Przyjęcia</th>
+                <th>Data Zakończenia</th>
+                <th>Wykonane Usługi</th>
+                <th>Akcje</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% for (let v of veh.repairs) { %>
+            <tr>
+                <td><a href="/repairs/details/<%= v.id %>"><%= v.id %></a></td>
+                <td><%= v.location.name %></td>
+                <td><%= v.location.city %></td>
+                <td><%= v.location.street %></td>
+                <td><%= v.location.streetNum %></td>
+                <td><%= v.admissionDate.toISOString().split('T')[0] %></td>
+                <td><%= (v.releaseDate == null) ? v.status.name : v.releaseDate %></td>
+                <td>
+                <% for (let rs of v.repair_services) { %>
+                    <p><%= rs.service.name %></p>
+                <% } %>
+                </td>
+                <td>
+                    <a href="/repairs/details/<%= v.id%>" class="list-actions-button-details">Szczegóły</a>
+                </td>
+            </tr>
+            <% } %>
+            </tbody>
+        </table>
+    <% } %>
+
+
+</main>
+
+<%- include('../../fragments/footer.ejs')%>

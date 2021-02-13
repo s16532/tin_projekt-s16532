@@ -4,18 +4,20 @@ html {
 }
 
 body {
-    min-width: 600px;
+    min-width: 360px;
 }
 
 header,
 main,
+section,
 footer {
     background-color: white;
 }
 
-heade,
+header,
 main,
 footer,
+section,
 nav{
     margin: 1rem;
 }
@@ -26,17 +28,15 @@ footer{
     color: white;
     padding: 1rem;
 }
-
-header{
-    overflow: auto;
+section{
+    background-color: #2d343a;
+    color: white;
+    padding: 0.5rem;
 }
 
-header h1 {
-    float: right;
-}
-
-header img {
-    float: left;
+header {
+    display: flex;
+    justify-content: space-between;
 }
 
 nav {
@@ -44,13 +44,9 @@ nav {
 }
 
 nav ul {
+    display: flex;
     padding: 0;
-    overflow: hidden;
     list-style-type: none;
-}
-
-nav ul li {
-    float: left;
 }
 
 nav ul li a {
@@ -117,7 +113,10 @@ main h2 {
     display: inline-block;
 }
 
+.button-logout,
+.button-login,
 .list-actions-button-details,
+.list-actions-button-vehicle,
 .list-actions-button-edit,
 .list-actions-button-delete {
     display: inline-block;
@@ -125,7 +124,10 @@ main h2 {
     padding: 0.25rem 0.5rem;
 }
 
+.button-logout,
+.button-login,
 .list-actions-button-details,
+.list-actions-button-vehicle,
 .list-actions-button-edit,
 .list-actions-button-delete,
 .button-add,
@@ -140,6 +142,10 @@ main h2 {
     font-size: 0.8rem;
 }
 
+.button-logout,
+.button-login{
+    background-color: #55646a;
+}
 .list-actions-button-details {
     background-color: #2980b9;
 }
@@ -169,11 +175,13 @@ main h2 {
     padding: 0.5rem 1rem;
 }
 .button-add,
-.form-button-submit {
+.form-button-submit,
+.list-actions-button-vehicle {
     background-color: #27ae60;
 }
 .button-add:hover,
-.form-button-submit:hover {
+.form-button-submit:hover,
+.list-actions-button-vehicle {
     background-color: #2ecc71;
 }
 
@@ -198,9 +206,15 @@ textarea {
     margin: 0;
 }
 
+textarea {
+    overflow: auto;
+}
+
 .form {
-    margin-left: 2rem;
-    width: 400px;
+    display: grid;
+    grid-template-columns: 150px 300px 2fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
 }
 
 .form select,
@@ -226,7 +240,8 @@ abbr[title='required'] {
 }
 
 .form-buttons {
-    margin-top: 2rem;
+    grid-column-end: -1;
+    grid-column: 1 / span 2;
 }
 
 .form-button-cancel,
@@ -242,3 +257,86 @@ abbr[title='required'] {
 .form-button-submit {
     margin-bottom: 0.5rem;
 }
+
+.errors-text {
+    font-size: 0.85em;
+    line-height: 2.25rem;
+}
+
+.form input.error-input,
+.form select.error-input {
+    border: 3px solid #e74c3c;
+}
+
+
+
+
+
+
+
+
+@media all and (max-width: 765px) {
+
+    header {
+        flex-direction: column;
+    }
+    header h1 {
+        text-align: center;
+    }
+    header img  {
+        align-self: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+    nav ul li {
+        flex-basis: 50%;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+    }
+
+    .form {
+        grid-template-columns: 1fr;
+        row-gap: unset;
+        margin-left: unset;
+    }
+
+    /*
+    .form input[type="text"],
+    .form input[type="number"],
+    .form input[type="date"],
+    .form select {
+        margin-bottom: 1rem;
+    }
+
+     */
+
+    .form .errors-text {
+        margin-bottom: 1rem;
+    }
+
+    .form-buttons {
+        grid-column: 1 / span 1;
+    }
+
+
+}
+
+@media all and (max-width: 400px) {
+    body,
+    nav,
+    nav ul,
+    header,
+    main,
+    footer {
+        margin: 0;
+    }
+
+    nav ul li {
+        flex-basis: 100%;
+    }
+}
+

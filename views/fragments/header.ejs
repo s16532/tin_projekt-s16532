@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serwis Samochodowy TOP-SERVICE</title>
+</head>
+<body>
+
+<header>
+
+    <h1>Serwis Samochodowy TOP-SERVICE</h1>
+    <img src="/images/logo.jpg"  alt="Serwis Samochodowy TOP-SERVICE" >
+
+</header>
+<section>
+<p>
+    <% if(!loggedUser) { %>
+        <div id="login">
+            <h5>Logowanie</h5>
+            <form method="post" action="/login" novalidate>
+                <label for="loginUname">Nazwa Użykownika:</label>
+                <input type="text" id="loginUname" name="uname">
+
+                <label for="loginPasswd">Hasło:</label>
+                <input type="password" id="loginPasswd" name="passwd">
+
+                <input type="submit" class="button-login" value="Zaloguj się">
+                <span id="loginErrors"><%= loginError ? loginError : ''%></span>
+            </form>
+        </div>
+    <% } else { %>
+    <span>Jesteś zalogowany jako: <%=loggedUser.firstName + " " + loggedUser.lastName%></span>
+    <a href="/logout" class="button-logout">Wyloguj się</a>
+    <% } %>
+</p>
+</section>
+
+<nav>
+    <ul>
+        <li><a href="/" class="<%= navLocation == 'main' ? 'active' : ''%>">Strona Główna</a></li>
+
+        <% if(loggedUser) { %>
+        <li><a href="/repairs" class="<%= navLocation == 'rep' ? 'active' : ''%>">Naprawy</a></li>
+        <% } %>
+
+        <li><a href="/locations" class="<%= navLocation == 'loc' ? 'active' : ''%>">Warsztaty</a></li>
+
+        <% if(loggedUser) { %>
+        <li><a href="/vehicles" class="<%= navLocation == 'veh' ? 'active' : ''%>">Pojazdy</a></li>
+        <% } %>
+
+        <% if(loggedUser) { %>
+        <li><a href="/employees" class="<%= navLocation == 'emp' ? 'active' : ''%>">Pracownicy</a></li>
+        <% } %>
+
+        <li><a href="/services" class="<%= navLocation == 'serv' ? 'active' : ''%>">Usługi</a></li>
+    </ul>
+</nav>

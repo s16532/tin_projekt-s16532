@@ -1,0 +1,47 @@
+<%- include('../../fragments/header.ejs')%>
+
+<main>
+    <h2>Katalog Usług</h2>
+
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Nazwa usługi</th>
+                <th>Cena (PLN)</th>
+                <% if(loggedUser) { %>
+                <th>Akcje</th>
+                <% } %>
+            </tr>
+        </thead>
+        <tbody>
+        <% for (let serv of servs) { %>
+            <tr>
+                <td><%= serv.name %></td>
+                <td><%= serv.price %></td>
+                <% if(loggedUser) { %>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/services/details/<%= serv.id %>" class="list-actions-button-details">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="/services/edit/<%= serv.id %>" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="/services/delete/<%= serv.id %>" class="list-actions-button-delete">Usuń</a>
+                        </li>
+                    </ul>
+                </td>
+                <% } %>
+            </tr>
+        <% } %>
+
+        </tbody>
+    </table>
+    <% if(loggedUser) { %>
+    <p><a href="/services/add" class="button-add">Dodaj nową usługę</a> </p>
+    <% } %>
+
+</main>
+
+<%- include('../../fragments/footer.ejs')%>

@@ -4,10 +4,31 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-
 var app = express();
+
+const session = require('express-session');
+app.use(session({
+    secret: 'my_secret_password',
+    resave: false
+}));
+
+app.use((req, res, next) => {
+    const loggedUser = req.session.loggedUser;
+    res.locals.loggedUser = loggedUser;
+    if(!res.locals.loginError) {
+        res.locals.loginError = undefined;
+    }
+    next();
+});
+
+var indexRouter = require('./routes/index');
+const locationRouter = require('./routes/locationRoute');
+const employeeRouter = require('./routes/employeeRoute');
+const repairRouter = require('./routes/repairRoute');
+const repairServiceRouter = require('./routes/repairServiceRoute');
+const vehicleRouter = require('./routes/vehicleRoute');
+const serviceRouter = require('./routes/serviceRoute');
+const authUtils = require('./util/authUtils');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -20,7 +41,13 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/locations', locationRouter);
+app.use('/employees', authUtils.permitAuthenticatedUser, employeeRouter);
+app.use('/repairs', authUtils.permitAuthenticatedUser, repairRouter);
+app.use('/repairsServices', authUtils.permitAuthenticatedUser, repairServiceRouter);
+app.use('/vehicles', authUtils.permitAuthenticatedUser, vehicleRouter);
+app.use('/services', serviceRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -37,5 +64,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
+
+const sequelizeInit = require('./config/sequelize/init');
+sequelizeInit()
+    .catch(err => {
+      console.log(err);
+    });
 
 module.exports = app;

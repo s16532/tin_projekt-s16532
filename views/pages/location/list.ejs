@@ -1,0 +1,52 @@
+<%- include('../../fragments/header.ejs')%>
+
+<main>
+    <h2>Warsztaty</h2>
+
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Nazwa</th>
+                <th>Miasto</th>
+                <th>Ulica</th>
+                <th>Numer</th>
+                <th>Kod pocztowy</th>
+                <% if(loggedUser) { %>
+                <th>Akcje</th>
+                <% }%>
+            </tr>
+        </thead>
+        <tbody>
+        <% for (let loc of locs) { %>
+            <tr>
+                <td><%= loc.name %></td>
+                <td><%= loc.city %></td>
+                <td><%= loc.street %></td>
+                <td><%= loc.streetNum %></td>
+                <td><%= loc.postCode %></td>
+                <% if(loggedUser) { %>
+                <td>
+                    <ul class="list-actions">
+                        <li>
+                            <a href="/locations/details/<%=loc.id%>" class="list-actions-button-details">Szczegóły</a>
+                        </li>
+                        <li>
+                            <a href="/locations/edit/<%=loc.id%>" class="list-actions-button-edit">Edytuj</a>
+                        </li>
+                        <li>
+                            <a href="/locations/delete/<%=loc.id%>" class="list-actions-button-delete">Usuń</a>
+                        </li>
+                    </ul>
+                </td>
+                <% }%>
+            </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <% if(loggedUser) { %>
+    <p><a href="/locations/add" class="button-add">Dodaj nowy warsztat</a> </p>
+    <% } %>
+
+</main>
+
+<%- include('../../fragments/footer.ejs')%>

@@ -1,0 +1,45 @@
+<%- include('../../fragments/header.ejs')%>
+
+<script type="application/javascript" src="/js/validationCommon.js"></script>
+<script type="application/javascript" src="/js/validationServiceForm.js"></script>
+
+<main>
+    <h2><%= pageTitle %></h2>
+    <form class="form" method="post" action="<%=formAction%>" novalidate onsubmit="return validateForm();">
+        <input type="hidden" name="id" value="<%= serv.id %>">
+
+        <label for="name">Nazwa usługi<abbr title="required" aria-label="required">*</abbr></label>
+        <input type="text" name="name" id="name" placeholder="" value="<%= serv.name%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorName" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('name'))) { %>
+                <%= validationErrors.find(e => e.path.includes('name')).message %>
+            <% } %>
+        </span>
+
+        <label for="price">Cena<sup>*</sup></label>
+        <input type="text" name="price" id="price" placeholder="" value="<%= serv.price%>" <%= (formMode == 'showDetails') ? 'disabled' : '' %> />
+        <span id="errorPrice" class="errors-text">
+            <% if (validationErrors.find(e => e.path.includes('price'))) { %>
+                <%= validationErrors.find(e => e.path.includes('price')).message %>
+            <% } %>
+        </span>
+
+        <% if (formMode == 'showDetails') { %>
+            <div class="section-buttons">
+                <a href="/services/edit/<%= serv.id %>" class="list-actions-button-edit ">Edytuj</a>
+            </div>
+        <% } %>
+
+        <div class="form-buttons">
+            <p id="errorsSummary" class="errors-text"></p>
+            <% if (formMode != 'showDetails') { %>
+            <input class="form-button-submit" type="submit" value="<%=btnLabel%>" />
+            <a class="form-button-cancel" href="/services">Anuluj</a>
+            <% } else { %>
+                <a class="form-button-cancel" href="/services">Powrót</a>
+            <% } %>
+        </div>
+    </form>
+</main>
+
+<%- include('../../fragments/footer.ejs')%>

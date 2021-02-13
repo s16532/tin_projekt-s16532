@@ -1,0 +1,57 @@
+<%- include('../../fragments/header.ejs')%>
+
+<main>
+    <h2>Naprawy</h2>
+
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Warsztat</th>
+                <th>Marka</th>
+                <th>Model</th>
+                <th>VIN</th>
+                <th>Data Przyjęcia</th>
+                <th>Pracownik Przyjmujący</th>
+                <th>Data Zakończenia</th>
+                <th>Pracownik Wydający</th>
+                <th>Akcje</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% for (let rep of reps) { %>
+        <tr>
+            <td><%= rep.id %></td>
+            <td><%= rep.location.name %></td>
+            <td><%= rep.vehicle.brand %></td>
+            <td><%= rep.vehicle.model %></td>
+            <td><%= rep.vehicle.VIN %></td>
+            <td><%= rep.admissionDate %></td>
+            <td><%= rep.admission_Emp.firstName + ' ' + rep.admission_Emp.lastName%></td>
+            <td><%= (rep.releaseDate == null) ? rep.status.name : rep.releaseDate %></td>
+            <td><%= (rep.releaseEmp == null) ? '' : rep.release_Emp.firstName + ' ' + rep.release_Emp.lastName %></td>
+            <td>
+                <ul class="list-actions">
+                    <li>
+                        <a href="/vehicles/details/<%= rep.vehicle.id %>" class="list-actions-button-vehicle">Pojazd</a>
+                    </li>
+                    <li>
+                        <a href="/repairs/details/<%= rep.id %>" class="list-actions-button-details">Szczegóły</a>
+                    </li>
+                    <li>
+                        <a href="/repairs/edit/<%= rep.id %>" class="list-actions-button-edit">Edytuj</a>
+                    </li>
+                    <li>
+                        <a href="/repairs/delete/<%= rep.id %>" class="list-actions-button-delete">Usuń</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <% } %>
+        </tbody>
+    </table>
+    <p><a href="/repairs/add" class="button-add">Dodaj nową naprawę</a> </p>
+
+</main>
+
+<%- include('../../fragments/footer.ejs')%>
