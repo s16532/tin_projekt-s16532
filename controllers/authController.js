@@ -1,4 +1,5 @@
 const EmployeeRepository = require('../repository/sequelize/EmployeeRepository');
+const authUtil = require('../util/authUtils');
 
 exports.login = (req, res, next) => {
     const uname = req.body.uname;
@@ -10,7 +11,7 @@ exports.login = (req, res, next) => {
                     navLocation: '',
                     loginError: "Nieprawidłowa nazwa użytkownika lub hasło"
                 })
-            } else if(emp.passwd === passwd) {
+            } else if(authUtil.comparePasswords(passwd, emp.passwd) === true) {
                 req.session.loggedUser = emp;
                 res.redirect('/');
             } else {

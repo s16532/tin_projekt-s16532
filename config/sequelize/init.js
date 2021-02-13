@@ -8,6 +8,9 @@ const Service = require('../../model/sequelize/Service');
 const Vehicle = require('../../model/sequelize/Vehicle');
 const Status = require('../../model/sequelize/Status');
 
+const authUtil = require('../../util/authUtils');
+const passHash = authUtil.hashPassword('Welcome1');
+
 module.exports = () => {
 
 //EMPLOYEE --- REPAIR (ADMISSION)
@@ -197,21 +200,21 @@ module.exports = () => {
               lastName: 'Marchewka',
               firstName: 'Apolonia',
               uname: 'amarchewka',
-              passwd: 'Welcome1',
+              passwd: passHash,
               active: true,
             },
             {
               lastName: 'Nowak',
               firstName: 'Adam',
               uname: 'anowak',
-              passwd: 'Welcome1',
+              passwd: passHash,
               active: true,
             },
             {
               lastName: 'Kowalski',
               firstName: 'Marian',
               uname: 'mkowalski',
-              passwd: 'Welcome1',
+              passwd: passHash,
               active: true,
             },
           ])
