@@ -9,13 +9,15 @@ body {
 
 header,
 main,
+section,
 footer {
     background-color: white;
 }
 
-head,
+header,
 main,
 footer,
+section,
 nav{
     margin: 1rem;
 }
@@ -25,6 +27,11 @@ footer{
     background-color: #34495e;
     color: white;
     padding: 1rem;
+}
+section{
+    background-color: #2d343a;
+    color: white;
+    padding: 0.5rem;
 }
 
 header {
@@ -106,6 +113,8 @@ main h2 {
     display: inline-block;
 }
 
+.button-logout,
+.button-login,
 .list-actions-button-details,
 .list-actions-button-vehicle,
 .list-actions-button-edit,
@@ -115,6 +124,8 @@ main h2 {
     padding: 0.25rem 0.5rem;
 }
 
+.button-logout,
+.button-login,
 .list-actions-button-details,
 .list-actions-button-vehicle,
 .list-actions-button-edit,
@@ -131,6 +142,10 @@ main h2 {
     font-size: 0.8rem;
 }
 
+.button-logout,
+.button-login{
+    background-color: #55646a;
+}
 .list-actions-button-details {
     background-color: #2980b9;
 }

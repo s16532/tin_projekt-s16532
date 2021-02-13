@@ -4,6 +4,23 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var app = express();
+
+const session = require('express-session');
+app.use(session({
+    secret: 'my_secret_password',
+    resave: false
+}));
+
+app.use((req, res, next) => {
+    const loggedUser = req.session.loggedUser;
+    res.locals.loggedUser = loggedUser;
+    if(!res.locals.loginError) {
+        res.locals.loginError = undefined;
+    }
+    next();
+});
+
 var indexRouter = require('./routes/index');
 const locationRouter = require('./routes/locationRoute');
 const employeeRouter = require('./routes/employeeRoute');
@@ -11,9 +28,6 @@ const repairRouter = require('./routes/repairRoute');
 const repairServiceRouter = require('./routes/repairServiceRoute');
 const vehicleRouter = require('./routes/vehicleRoute');
 const serviceRouter = require('./routes/serviceRoute');
-
-
-var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

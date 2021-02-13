@@ -50,7 +50,7 @@ const Employee = sequelize.define('Employee', {
     },
     passwd:{
         type: Sequelize.STRING,
-        allowNull: true,
+        allowNull: false,
         validate: {
             len: {
                 args: [0,60],

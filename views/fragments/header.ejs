@@ -9,9 +9,33 @@
 <body>
 
 <header>
+
     <h1>Serwis Samochodowy TOP-SERVICE</h1>
     <img src="/images/logo.jpg"  alt="Serwis Samochodowy TOP-SERVICE" >
+
 </header>
+<section>
+<p>
+    <% if(!loggedUser) { %>
+        <div id="login">
+            <h5>Logowanie</h5>
+            <form method="post" action="/login" novalidate>
+                <label for="loginUname">Nazwa Użykownika:</label>
+                <input type="text" id="loginUname" name="uname">
+
+                <label for="loginPasswd">Hasło:</label>
+                <input type="password" id="loginPasswd" name="passwd">
+
+                <input type="submit" class="button-login" value="Zaloguj się">
+                <span id="loginErrors"><%= loginError ? loginError : ''%></span>
+            </form>
+        </div>
+    <% } else { %>
+    <span>Jesteś zalogowany jako: <%=loggedUser.firstName + " " + loggedUser.lastName%></span>
+    <a href="/logout" class="button-logout">Wyloguj się</a>
+    <% } %>
+</p>
+</section>
 
 <nav>
     <ul>

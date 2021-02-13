@@ -26,6 +26,12 @@ exports.getEmployeeById = (empId) => {
         });
 };
 
+exports.findByUname = (uname) => {
+    return Employee.findOne({
+        where: {uname: uname}
+    });
+}
+
 exports.createEmployee = (newEmpData) => {
     return Employee.create({
         lastName: newEmpData.lastName,
