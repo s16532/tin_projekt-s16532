@@ -28,6 +28,7 @@ const repairRouter = require('./routes/repairRoute');
 const repairServiceRouter = require('./routes/repairServiceRoute');
 const vehicleRouter = require('./routes/vehicleRoute');
 const serviceRouter = require('./routes/serviceRoute');
+const authUtils = require('./util/authUtils');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -41,10 +42,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/locations', locationRouter);
-app.use('/employees', employeeRouter);
-app.use('/repairs', repairRouter);
-app.use('/repairsServices', repairServiceRouter);
-app.use('/vehicles', vehicleRouter);
+app.use('/employees', authUtils.permitAuthenticatedUser, employeeRouter);
+app.use('/repairs', authUtils.permitAuthenticatedUser, repairRouter);
+app.use('/repairsServices', authUtils.permitAuthenticatedUser, repairServiceRouter);
+app.use('/vehicles', authUtils.permitAuthenticatedUser, vehicleRouter);
 app.use('/services', serviceRouter);
 
 

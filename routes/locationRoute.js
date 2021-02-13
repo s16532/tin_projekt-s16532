@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 
 const locationController = require('../controllers/locationController');
+const authUtils = require('../util/authUtils');
 
 /*
 router.get('/', function(req, res, next){
@@ -18,12 +19,12 @@ router.get('/details/:locationId', function(req, res, next){
  */
 
 router.get('/', locationController.showLocationList );
-router.get('/add', locationController.showAddLocationForm);
-router.get('/edit/:locationId', locationController.showEditLocationForm);
-router.get('/details/:locationId', locationController.showLocationDetails);
+router.get('/add', authUtils.permitAuthenticatedUser, locationController.showAddLocationForm);
+router.get('/edit/:locationId', authUtils.permitAuthenticatedUser, locationController.showEditLocationForm);
+router.get('/details/:locationId', authUtils.permitAuthenticatedUser, locationController.showLocationDetails);
 
-router.post('/add', locationController.addLocation);
-router.post('/edit', locationController.updateLocation);
-router.get('/delete/:locationId', locationController.deleteLocation);
+router.post('/add', authUtils.permitAuthenticatedUser, locationController.addLocation);
+router.post('/edit', authUtils.permitAuthenticatedUser, locationController.updateLocation);
+router.get('/delete/:locationId', authUtils.permitAuthenticatedUser, locationController.deleteLocation);
 
 module.exports = router;

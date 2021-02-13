@@ -8,7 +8,9 @@
             <tr>
                 <th>Nazwa usługi</th>
                 <th>Cena (PLN)</th>
+                <% if(loggedUser) { %>
                 <th>Akcje</th>
+                <% } %>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +18,7 @@
             <tr>
                 <td><%= serv.name %></td>
                 <td><%= serv.price %></td>
+                <% if(loggedUser) { %>
                 <td>
                     <ul class="list-actions">
                         <li>
@@ -29,12 +32,15 @@
                         </li>
                     </ul>
                 </td>
+                <% } %>
             </tr>
         <% } %>
 
         </tbody>
     </table>
+    <% if(loggedUser) { %>
     <p><a href="/services/add" class="button-add">Dodaj nową usługę</a> </p>
+    <% } %>
 
 </main>
 

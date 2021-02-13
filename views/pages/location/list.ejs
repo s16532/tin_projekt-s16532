@@ -11,7 +11,9 @@
                 <th>Ulica</th>
                 <th>Numer</th>
                 <th>Kod pocztowy</th>
+                <% if(loggedUser) { %>
                 <th>Akcje</th>
+                <% }%>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +24,7 @@
                 <td><%= loc.street %></td>
                 <td><%= loc.streetNum %></td>
                 <td><%= loc.postCode %></td>
+                <% if(loggedUser) { %>
                 <td>
                     <ul class="list-actions">
                         <li>
@@ -35,11 +38,14 @@
                         </li>
                     </ul>
                 </td>
+                <% }%>
             </tr>
         <% } %>
         </tbody>
     </table>
+    <% if(loggedUser) { %>
     <p><a href="/locations/add" class="button-add">Dodaj nowy warsztat</a> </p>
+    <% } %>
 
 </main>
 
